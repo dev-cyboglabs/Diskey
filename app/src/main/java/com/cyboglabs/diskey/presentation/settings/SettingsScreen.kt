@@ -93,7 +93,7 @@ fun SettingsScreen(
             SettingsSection("Connection") {
                 SettingsToggle(
                     title = "Auto Reconnect",
-                    subtitle = "Automatically reconnect when T240 is nearby",
+                    subtitle = "Automatically reconnect when device is nearby",
                     checked = state.autoReconnect,
                     onCheckedChange = viewModel::setAutoReconnect
                 )

@@ -70,6 +70,18 @@ class BleConnectionManager @Inject constructor(
     private var reconnectAttempts = 0
 
     init {
+        // Set up disconnection callback for physical disconnections
+        bleDeviceManager.onDeviceDisconnected = {
+            scope.launch {
+                Timber.w("BleConnectionManager: Physical disconnection detected")
+                _connectionState.value = ConnectionState.DISCONNECTED
+                targetAddress = null
+                clearHandshake()
+            }
+        }
+    }
+
+    init {
         // Forward packets from the BLE manager channel into the shared flow
         scope.launch {
             bleDeviceManager.packetChannel.consumeEach { packet ->

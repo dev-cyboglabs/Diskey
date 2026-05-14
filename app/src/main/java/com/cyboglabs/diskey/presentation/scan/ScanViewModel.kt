@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -49,9 +50,20 @@ class ScanViewModel @Inject constructor(
 
     private var scanJob: Job? = null
     private val discoveredDevices = mutableMapOf<String, Device>()
+    private var pairedDeviceAddress: String? = null
+    private var autoReconnectEnabled = true
 
     init {
         observeConnectionState()
+        loadPairedDevice()
+    }
+
+    private fun loadPairedDevice() {
+        viewModelScope.launch {
+            pairedDeviceAddress = appPreferences.pairedAddress.first()
+            autoReconnectEnabled = appPreferences.autoReconnect.first()
+            Timber.d("ScanViewModel: Paired device loaded: $pairedDeviceAddress, auto-reconnect: $autoReconnectEnabled")
+        }
     }
 
     fun startScan() {
@@ -70,6 +82,12 @@ class ScanViewModel @Inject constructor(
                     discoveredDevices[device.address] = device
                     _uiState.update { state ->
                         state.copy(devices = discoveredDevices.values.sortedByDescending { it.rssi })
+                    }
+                    
+                    // Auto-connect if this is the paired device and auto-reconnect is enabled
+                    if (autoReconnectEnabled && device.address == pairedDeviceAddress && _uiState.value.connectionState != ConnectionState.CONNECTED) {
+                        Timber.d("ScanViewModel: Paired device found, auto-connecting: ${device.address}")
+                        connect(device)
                     }
                 }
         }

@@ -38,6 +38,9 @@ class BleDeviceManager @Inject constructor(
     private val _connectionReady = MutableStateFlow(false)
     val connectionReady: StateFlow<Boolean> = _connectionReady.asStateFlow()
 
+    // Callback for device disconnection (services invalidated)
+    var onDeviceDisconnected: (() -> Unit)? = null
+
     // ─── BleManager overrides ───────────────────────────────────────────────
 
     private var _gattCallback: BleManagerGattCallback? = null
@@ -102,6 +105,7 @@ class BleDeviceManager @Inject constructor(
             notifyCharacteristic = null
             _connectionReady.value = false
             Timber.e("BleDeviceManager: ✗✗✗ SERVICES INVALIDATED - Device disconnected! ✗✗✗")
+            onDeviceDisconnected?.invoke()
         }
     }
         }

@@ -3,6 +3,7 @@ package com.cyboglabs.diskey.presentation.splash
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
+import android.content.Intent
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -22,6 +23,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,11 +32,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.cyboglabs.diskey.ble.BleService
 import com.cyboglabs.diskey.presentation.theme.Primary
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
 import com.cyboglabs.diskey.utils.PermissionUtils
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
@@ -43,6 +50,7 @@ fun SplashScreen(
     onNavigateToDashboard: () -> Unit
 ) {
     val context = LocalContext.current
+    val coroutineScope = rememberCoroutineScope()
     val permissions = PermissionUtils.getRequiredBlePermissions().toList() +
         PermissionUtils.getRequiredNotificationPermissions().toList()
 
@@ -61,14 +69,26 @@ fun SplashScreen(
         }
         delay(800)
         
-        // Check if device is paired
-        val bluetoothManager = context.getSystemService(Context.BLUETOOTH_SERVICE) as? BluetoothManager
-        val adapter = bluetoothManager?.adapter
-        val hasPairedDevices = adapter?.bondedDevices?.isNotEmpty() == true
+        // Check if device is paired in app preferences
+        val prefs = com.cyboglabs.diskey.data.datastore.AppPreferences(context)
+        val pairedAddress = prefs.pairedAddress.first()
+        val autoReconnectEnabled = prefs.autoReconnect.first()
         
-        if (hasPairedDevices) {
+        if (pairedAddress != null && pairedAddress.isNotEmpty() && autoReconnectEnabled) {
+            // Device is paired and auto-reconnect is enabled, trigger auto-reconnect
+            coroutineScope.launch {
+                val intent = Intent(context, BleService::class.java).apply {
+                    action = BleService.ACTION_CONNECT
+                    putExtra(BleService.EXTRA_ADDRESS, pairedAddress)
+                }
+                context.startForegroundService(intent)
+            }
+            onNavigateToDashboard()
+        } else if (pairedAddress != null && pairedAddress.isNotEmpty()) {
+            // Device is paired but auto-reconnect is disabled, go to dashboard without connecting
             onNavigateToDashboard()
         } else {
+            // No paired device, go to scan screen
             onNavigateToScan()
         }
     }
