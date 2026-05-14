@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diskey</string>
+    <string name="ble_service_name">BLE Connection</string>
+    <string name="wifi_service_name">WiFi Transfer</string>
+    <string name="download_service_name">Audio Download</string>
+    <string name="playback_service_name">Audio Playback</string>
+</resources>

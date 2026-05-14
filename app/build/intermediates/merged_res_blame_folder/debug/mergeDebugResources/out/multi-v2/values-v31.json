@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.cyboglabs.diskey.app-mergeDebugResources-77:/values-v31/values-v31.xml",
+            "map": [
+                {
+                    "source": "/Users/KABILAN/.gradle/caches/transforms-4/8dc0f929a5da2724dedbebd99a9dff5a/transformed/core-splashscreen-1.0.1/res/values-v31/values-v31.xml",
+                    "from": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,473",
+                        "endLines": "8,13",
+                        "endColumns": "12,12",
+                        "endOffsets": "468,697"
+                    }
+                }
+            ]
+        }
+    ]
+}

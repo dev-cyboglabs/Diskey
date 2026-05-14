@@ -1,0 +1,945 @@
+-- Merging decision tree log ---
+provider#androidx.startup.InitializationProvider
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:105:9-113:20
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:109:13-31
+	android:authorities
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:107:13-68
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:108:13-37
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:106:13-67
+provider#androidx.core.content.FileProvider
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:116:9-124:20
+	android:grantUriPermissions
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:120:13-47
+	android:authorities
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:118:13-64
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:119:13-37
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:117:13-62
+manifest
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:2:1-127:12
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:2:1-127:12
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:2:1-127:12
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:2:1-127:12
+MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.34.0] /Users/KABILAN/.gradle/caches/transforms-4/d49f57953195994a522520ba88b358d5/transformed/accompanist-systemuicontroller-0.34.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.media3:media3-ui:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/e7a9e674ec2e2cc0ba417d0febb6d67e/transformed/media3-ui-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-session:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0856f415d5f9ca04e4d5bc354dde4816/transformed/media3-session-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-extractor:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/4c4311c2438d72dc3215d29c637d55aa/transformed/media3-extractor-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-container:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/dbb100ec17784a957aa4cb415cfe4584/transformed/media3-container-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-datasource:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/3161ec929943d6dd68e9f8996579742c/transformed/media3-datasource-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-decoder:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/c5d38dc936f9f5a023dc75c026f68f8d/transformed/media3-decoder-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-database:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/223eaf4937b71229d87c3fe42a88c2cf/transformed/media3-database-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-common:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0e1ffd54f0cd63f750b773cc679f010c/transformed/media3-common-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-exoplayer:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/d03ceac2ead43459d23b8e91131d5171/transformed/media3-exoplayer-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.7.0] /Users/KABILAN/.gradle/caches/transforms-4/a4ecf40f9249be317d0a9bb0844248c4/transformed/media-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/336e60a3d8849b1cc346843a2510d52e/transformed/recyclerview-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.hilt:hilt-work:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/4747d2a93f4c18e59ef6513932ad2cfd/transformed/hilt-work-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/9c310bcb254abec0a42c9e740f2e5e37/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/aefb1733c737bcbf7fb2d8d22f08ff2f/transformed/hilt-navigation-compose-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/e3db090a444d131500dff9ffac642da8/transformed/hilt-navigation-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/d973947afdae48b7f83ea8ee3e04eac0/transformed/navigation-common-2.7.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/e197ab553077887121d52cd3360749da/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/61c6ba04b8bb91d2d5f436c7e305c230/transformed/navigation-common-ktx-2.7.7/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/eab532e7ee680f3c81253adf41722d1b/transformed/navigation-runtime-ktx-2.7.7/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/4ba53b3d999bfe315ab617bb1b4474c6/transformed/navigation-compose-2.7.7/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-permissions:0.34.0] /Users/KABILAN/.gradle/caches/transforms-4/98bf8def044ad44cb52445516b4e64b9/transformed/accompanist-permissions-0.34.0/AndroidManifest.xml:17:1-23:12
+MERGED from [com.airbnb.android:lottie-compose:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/9380c9a5f37a4447ef81b08a07d57d81/transformed/lottie-compose-6.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/ef68b8ff7c0d5adfaa19b040d318bf83/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:hilt-android:2.51.1] /Users/KABILAN/.gradle/caches/transforms-4/6aa15feec4e543ab351b09d4c4606800/transformed/hilt-android-2.51.1/AndroidManifest.xml:16:1-19:12
+MERGED from [com.airbnb.android:lottie:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/46113b940c3c8e00593db99f1cf94d7a/transformed/lottie-6.4.1/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-compose:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/f07e754f40f8a7b7a177d0afdcc3bb7d/transformed/coil-compose-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/c9a28714bba0d16c76416ac78adad6d9/transformed/coil-compose-base-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/c6322e827dfece6fff69bfa63158ffa9/transformed/coil-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/bee06d324f10643ed374aca253edd76c/transformed/coil-base-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/KABILAN/.gradle/caches/transforms-4/f56bccd0ecd8bab3ffcf7050307482cc/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/KABILAN/.gradle/caches/transforms-4/d604ebc9a0f0c16d6abdc04e142005ce/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/KABILAN/.gradle/caches/transforms-4/1aeabb6c323eacf915021e5b00f5cf77/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/9e09d3229a8f3389291f22fbad919cfe/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/72f711e4af4f45c183cab445d5574762/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/adb84c44568b0e2f22b000d355b9f218/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/18d373a57a7d7f667f079a636ec9e62c/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/732625b49c164788bfa3c9de0e232cb0/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/3c18f25fde45b62b44883914a3d780ca/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/7344f4187307ca310f5718dfa7541d3c/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/18c85d97dde756cfb6232dbe490b1865/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/8887e8a1170e299662fe0dd5130005bf/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/f87612b1c8aa80117525ccbababc0117/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/406366ded541a09285ea1868df92979e/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/12c8f914d4f9f9d002361ae7df8b90dd/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/d603b5e2ca848cd8c536c290f47b53f0/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/83cfdd046486d66ad3b8edd802c71471/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/d86780e5e95fee1638ceb56a33c1552f/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/9345f4faa30e6160b84f3b8444802852/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/329e216a0279121f44d227b4bc9bdfe5/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/66c3867635903f2f7e1387ad7b61a1c9/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/5b3b9fa1de35a3f70e72ecbd5ab71742/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/1f7b3a8c2b1f2a11798afff9a1f86d52/transformed/lifecycle-livedata-core-ktx-2.8.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/573c1698466cf1ffc715501508347855/transformed/lifecycle-livedata-2.8.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e45be401258baee04d9f085e9d159e80/transformed/lifecycle-livedata-core-2.8.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/95bb5a75bf8df932907e2a7d7baab083/transformed/lifecycle-viewmodel-2.8.3/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/320a26505bab6c1eec5f3019dfba1b4d/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/f950e4af174f61edd48167d4194074c2/transformed/lifecycle-viewmodel-ktx-2.8.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/765c338814e5da2538ac6fdbb9a24cc0/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/a2d19c0ec8de7a2077e62e23687ee32b/transformed/lifecycle-viewmodel-savedstate-2.8.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/de816b6b2d76cd45f35232d9b6bd2ad0/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/025ea66404276c5ec2250f10f22aabb5/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/abf7c71cf2eabb302c5ac2ec3ab1c791/transformed/lifecycle-service-2.8.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/b5455c34f5460c8371b97fa45c77d614/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/KABILAN/.gradle/caches/transforms-4/844655f7b08a189a0c0d1221342a6763/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.ui:ui-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/52448b7211378d2f6bf6829b4ef821d9/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity-compose:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/5a8742a694d69dafb8d7fa98d815251d/transformed/activity-compose-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/438263786e1d2425b3ddec5cea2c6c37/transformed/activity-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/0c6cdc9573ae95a3067da080f5a54244/transformed/activity-1.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/c4d9f65968c99360e3fcf2269e2d6d0d/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/358af5de60bb89da529d7ad5b2c69c6f/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/f93f714b74af71fd105f064d65294552/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/c0bb8a29a78a50adb9e80d80d5478d6c/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/KABILAN/.gradle/caches/transforms-4/b99b48a78eefe50f5257d0d75ae95b6a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/KABILAN/.gradle/caches/transforms-4/9958c8eb2c1ea9e4622114dccb8b9fa4/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/f71858453a0ae231539e28ecc9be36ad/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/157cedf09e52495da0b3da510210b0aa/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-splashscreen:1.0.1] /Users/KABILAN/.gradle/caches/transforms-4/8dc0f929a5da2724dedbebd99a9dff5a/transformed/core-splashscreen-1.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/141b0b9c1799d88ff31817cf128c20f6/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [no.nordicsemi.android:ble-ktx:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/947346e6f6853be19a30553a61c5d8e5/transformed/ble-ktx-2.7.5/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/5bff348b0e78c1422b502ee70a6d7770/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/052bd5add7413ecf30c7e26557243206/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/607d408e7b64872bc82a63cf86b5003b/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/612bb55d27ccc811005137c36c606842/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/830dfdec80b9c00b890cb221b7093566/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton.timber:timber:5.0.1] /Users/KABILAN/.gradle/caches/transforms-4/614f44df60c4c613798564f4934bd4a7/transformed/timber-5.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/KABILAN/.gradle/caches/transforms-4/5d77800156ca7d3ae3ac2e1f087232ec/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/KABILAN/.gradle/caches/transforms-4/202a8861438e511e31f4ed2e89581a97/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/KABILAN/.gradle/caches/transforms-4/0bd572d896a0dfbc4103a527b77839fa/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/KABILAN/.gradle/caches/transforms-4/3d90c172f09d8a0b5616c5342cec5402/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/fee20cefa8b040996338f2b9cde69ce0/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/00556e8e21a3553b717380e6f4b1627f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/486cab2b6aaf0b2c4f8052b94d232177/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/KABILAN/.gradle/caches/transforms-4/e92edf74ac9b1caff8819b98055f3edd/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/318ddfe4cc4001e4a74060945b584718/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] /Users/KABILAN/.gradle/caches/transforms-4/9d1ffada2b4ea509149994f882e67f75/transformed/dagger-lint-aar-2.51.1/AndroidManifest.xml:16:1-19:12
+	package
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:6:5-95
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:7:5-9:38
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:7:5-9:38
+	android:maxSdkVersion
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:6:66-92
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:6:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:7:5-101
+	android:maxSdkVersion
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:7:72-98
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:7:22-71
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:9:5-11:31
+	android:usesPermissionFlags
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:10:9-55
+	tools:targetApi
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:11:9-28
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:9:22-70
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:12:5-96
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:15:5-76
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:15:5-76
+	tools:targetApi
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:12:74-93
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.BLUETOOTH_ADVERTISE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:13:5-98
+	tools:targetApi
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:13:76-95
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:13:22-75
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:16:5-106
+	android:maxSdkVersion
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:16:77-103
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:16:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:17:5-108
+	android:maxSdkVersion
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:17:79-105
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:17:22-78
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:20:5-76
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:20:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:21:5-76
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:21:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:22:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:23:5-79
+MERGED from [androidx.media3:media3-common:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0e1ffd54f0cd63f750b773cc679f010c/transformed/media3-common-1.3.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-common:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0e1ffd54f0cd63f750b773cc679f010c/transformed/media3-common-1.3.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/d03ceac2ead43459d23b8e91131d5171/transformed/media3-exoplayer-1.3.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/d03ceac2ead43459d23b8e91131d5171/transformed/media3-exoplayer-1.3.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:23:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:24:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:27:5-107
+	android:maxSdkVersion
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:27:78-104
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:27:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:28:5-108
+	android:maxSdkVersion
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:28:79-105
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:28:22-78
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:29:5-111
+	tools:ignore
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:29:80-108
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:29:22-79
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:32:5-77
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:32:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:35:5-77
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:5-77
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:5-77
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:35:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:36:5-94
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:36:22-91
+uses-permission#android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:37:5-92
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:37:22-89
+uses-permission#android.permission.FOREGROUND_SERVICE_DATA_SYNC
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:38:5-87
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:38:22-84
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:41:5-68
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:5-68
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:41:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:42:5-81
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:5-81
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:5-81
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:42:22-78
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:44:5-90
+	android:required
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:44:64-87
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:44:19-63
+uses-feature#android.hardware.wifi
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:45:5-83
+	android:required
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:45:56-80
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:45:19-55
+application
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:47:5-126:19
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:47:5-126:19
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:28:5-143:19
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:28:5-143:19
+MERGED from [com.airbnb.android:lottie:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/46113b940c3c8e00593db99f1cf94d7a/transformed/lottie-6.4.1/AndroidManifest.xml:7:5-20
+MERGED from [com.airbnb.android:lottie:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/46113b940c3c8e00593db99f1cf94d7a/transformed/lottie-6.4.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [com.jakewharton.timber:timber:5.0.1] /Users/KABILAN/.gradle/caches/transforms-4/614f44df60c4c613798564f4934bd4a7/transformed/timber-5.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:5.0.1] /Users/KABILAN/.gradle/caches/transforms-4/614f44df60c4c613798564f4934bd4a7/transformed/timber-5.0.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/00556e8e21a3553b717380e6f4b1627f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/00556e8e21a3553b717380e6f4b1627f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:55:9-35
+	android:label
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:53:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:57:9-43
+	android:fullBackupContent
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:51:9-54
+	android:roundIcon
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:54:9-54
+	tools:targetApi
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:58:9-29
+	android:icon
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:52:9-43
+	android:allowBackup
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:49:9-35
+	android:theme
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:56:9-44
+	android:dataExtractionRules
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:50:9-65
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:48:9-42
+activity#com.cyboglabs.diskey.presentation.MainActivity
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:60:9-70:20
+	android:launchMode
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:63:13-43
+	android:windowSoftInputMode
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:64:13-55
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:62:13-36
+	android:theme
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:65:13-57
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:61:13-54
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:66:13-69:29
+action#android.intent.action.MAIN
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:67:17-69
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:67:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:68:17-77
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:68:27-74
+service#com.cyboglabs.diskey.ble.BleService
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:73:9-77:63
+	android:enabled
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:75:13-35
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:76:13-37
+	android:foregroundServiceType
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:77:13-60
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:74:13-43
+service#com.cyboglabs.diskey.audio.AudioDownloadService
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:80:9-84:56
+	android:enabled
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:82:13-35
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:83:13-37
+	android:foregroundServiceType
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:84:13-53
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:81:13-55
+service#com.cyboglabs.diskey.audio.AudioPlaybackService
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:87:9-95:19
+	android:enabled
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:89:13-35
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:90:13-36
+	android:foregroundServiceType
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:91:13-58
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:88:13-55
+intent-filter#action:name:androidx.media3.session.MediaSessionService
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:92:13-94:29
+action#androidx.media3.session.MediaSessionService
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:93:17-86
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:93:25-83
+service#com.cyboglabs.diskey.wifi.WifiService
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:98:9-102:56
+	android:enabled
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:100:13-35
+	android:exported
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:101:13-37
+	android:foregroundServiceType
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:102:13-53
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:99:13-45
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:110:13-112:52
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+	android:value
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:112:17-49
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:111:17-68
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:121:13-123:54
+	android:resource
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:123:17-51
+	android:name
+		ADDED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml:122:17-67
+uses-sdk
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.34.0] /Users/KABILAN/.gradle/caches/transforms-4/d49f57953195994a522520ba88b358d5/transformed/accompanist-systemuicontroller-0.34.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.34.0] /Users/KABILAN/.gradle/caches/transforms-4/d49f57953195994a522520ba88b358d5/transformed/accompanist-systemuicontroller-0.34.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.media3:media3-ui:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/e7a9e674ec2e2cc0ba417d0febb6d67e/transformed/media3-ui-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-ui:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/e7a9e674ec2e2cc0ba417d0febb6d67e/transformed/media3-ui-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-session:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0856f415d5f9ca04e4d5bc354dde4816/transformed/media3-session-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-session:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0856f415d5f9ca04e4d5bc354dde4816/transformed/media3-session-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/4c4311c2438d72dc3215d29c637d55aa/transformed/media3-extractor-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/4c4311c2438d72dc3215d29c637d55aa/transformed/media3-extractor-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/dbb100ec17784a957aa4cb415cfe4584/transformed/media3-container-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/dbb100ec17784a957aa4cb415cfe4584/transformed/media3-container-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/3161ec929943d6dd68e9f8996579742c/transformed/media3-datasource-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/3161ec929943d6dd68e9f8996579742c/transformed/media3-datasource-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/c5d38dc936f9f5a023dc75c026f68f8d/transformed/media3-decoder-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/c5d38dc936f9f5a023dc75c026f68f8d/transformed/media3-decoder-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/223eaf4937b71229d87c3fe42a88c2cf/transformed/media3-database-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/223eaf4937b71229d87c3fe42a88c2cf/transformed/media3-database-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0e1ffd54f0cd63f750b773cc679f010c/transformed/media3-common-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/0e1ffd54f0cd63f750b773cc679f010c/transformed/media3-common-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/d03ceac2ead43459d23b8e91131d5171/transformed/media3-exoplayer-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/d03ceac2ead43459d23b8e91131d5171/transformed/media3-exoplayer-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.7.0] /Users/KABILAN/.gradle/caches/transforms-4/a4ecf40f9249be317d0a9bb0844248c4/transformed/media-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media:media:1.7.0] /Users/KABILAN/.gradle/caches/transforms-4/a4ecf40f9249be317d0a9bb0844248c4/transformed/media-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/336e60a3d8849b1cc346843a2510d52e/transformed/recyclerview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/336e60a3d8849b1cc346843a2510d52e/transformed/recyclerview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.hilt:hilt-work:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/4747d2a93f4c18e59ef6513932ad2cfd/transformed/hilt-work-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.hilt:hilt-work:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/4747d2a93f4c18e59ef6513932ad2cfd/transformed/hilt-work-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/9c310bcb254abec0a42c9e740f2e5e37/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/9c310bcb254abec0a42c9e740f2e5e37/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/aefb1733c737bcbf7fb2d8d22f08ff2f/transformed/hilt-navigation-compose-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/aefb1733c737bcbf7fb2d8d22f08ff2f/transformed/hilt-navigation-compose-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/e3db090a444d131500dff9ffac642da8/transformed/hilt-navigation-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] /Users/KABILAN/.gradle/caches/transforms-4/e3db090a444d131500dff9ffac642da8/transformed/hilt-navigation-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/d973947afdae48b7f83ea8ee3e04eac0/transformed/navigation-common-2.7.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/d973947afdae48b7f83ea8ee3e04eac0/transformed/navigation-common-2.7.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/e197ab553077887121d52cd3360749da/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/e197ab553077887121d52cd3360749da/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/61c6ba04b8bb91d2d5f436c7e305c230/transformed/navigation-common-ktx-2.7.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/61c6ba04b8bb91d2d5f436c7e305c230/transformed/navigation-common-ktx-2.7.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/eab532e7ee680f3c81253adf41722d1b/transformed/navigation-runtime-ktx-2.7.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/eab532e7ee680f3c81253adf41722d1b/transformed/navigation-runtime-ktx-2.7.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/4ba53b3d999bfe315ab617bb1b4474c6/transformed/navigation-compose-2.7.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.7] /Users/KABILAN/.gradle/caches/transforms-4/4ba53b3d999bfe315ab617bb1b4474c6/transformed/navigation-compose-2.7.7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.34.0] /Users/KABILAN/.gradle/caches/transforms-4/98bf8def044ad44cb52445516b4e64b9/transformed/accompanist-permissions-0.34.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.34.0] /Users/KABILAN/.gradle/caches/transforms-4/98bf8def044ad44cb52445516b4e64b9/transformed/accompanist-permissions-0.34.0/AndroidManifest.xml:21:5-44
+MERGED from [com.airbnb.android:lottie-compose:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/9380c9a5f37a4447ef81b08a07d57d81/transformed/lottie-compose-6.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.airbnb.android:lottie-compose:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/9380c9a5f37a4447ef81b08a07d57d81/transformed/lottie-compose-6.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/ef68b8ff7c0d5adfaa19b040d318bf83/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/ef68b8ff7c0d5adfaa19b040d318bf83/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:hilt-android:2.51.1] /Users/KABILAN/.gradle/caches/transforms-4/6aa15feec4e543ab351b09d4c4606800/transformed/hilt-android-2.51.1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.51.1] /Users/KABILAN/.gradle/caches/transforms-4/6aa15feec4e543ab351b09d4c4606800/transformed/hilt-android-2.51.1/AndroidManifest.xml:18:3-42
+MERGED from [com.airbnb.android:lottie:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/46113b940c3c8e00593db99f1cf94d7a/transformed/lottie-6.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.airbnb.android:lottie:6.4.1] /Users/KABILAN/.gradle/caches/transforms-4/46113b940c3c8e00593db99f1cf94d7a/transformed/lottie-6.4.1/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/f07e754f40f8a7b7a177d0afdcc3bb7d/transformed/coil-compose-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/f07e754f40f8a7b7a177d0afdcc3bb7d/transformed/coil-compose-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/c9a28714bba0d16c76416ac78adad6d9/transformed/coil-compose-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/c9a28714bba0d16c76416ac78adad6d9/transformed/coil-compose-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/c6322e827dfece6fff69bfa63158ffa9/transformed/coil-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/c6322e827dfece6fff69bfa63158ffa9/transformed/coil-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/bee06d324f10643ed374aca253edd76c/transformed/coil-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.6.0] /Users/KABILAN/.gradle/caches/transforms-4/bee06d324f10643ed374aca253edd76c/transformed/coil-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/KABILAN/.gradle/caches/transforms-4/f56bccd0ecd8bab3ffcf7050307482cc/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/KABILAN/.gradle/caches/transforms-4/f56bccd0ecd8bab3ffcf7050307482cc/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/KABILAN/.gradle/caches/transforms-4/d604ebc9a0f0c16d6abdc04e142005ce/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/KABILAN/.gradle/caches/transforms-4/d604ebc9a0f0c16d6abdc04e142005ce/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/KABILAN/.gradle/caches/transforms-4/1aeabb6c323eacf915021e5b00f5cf77/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/KABILAN/.gradle/caches/transforms-4/1aeabb6c323eacf915021e5b00f5cf77/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/9e09d3229a8f3389291f22fbad919cfe/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/9e09d3229a8f3389291f22fbad919cfe/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/72f711e4af4f45c183cab445d5574762/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/72f711e4af4f45c183cab445d5574762/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/adb84c44568b0e2f22b000d355b9f218/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/adb84c44568b0e2f22b000d355b9f218/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/18d373a57a7d7f667f079a636ec9e62c/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/18d373a57a7d7f667f079a636ec9e62c/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/732625b49c164788bfa3c9de0e232cb0/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/732625b49c164788bfa3c9de0e232cb0/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/3c18f25fde45b62b44883914a3d780ca/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/3c18f25fde45b62b44883914a3d780ca/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/7344f4187307ca310f5718dfa7541d3c/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/KABILAN/.gradle/caches/transforms-4/7344f4187307ca310f5718dfa7541d3c/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/18c85d97dde756cfb6232dbe490b1865/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/18c85d97dde756cfb6232dbe490b1865/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/8887e8a1170e299662fe0dd5130005bf/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/8887e8a1170e299662fe0dd5130005bf/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/f87612b1c8aa80117525ccbababc0117/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/f87612b1c8aa80117525ccbababc0117/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/406366ded541a09285ea1868df92979e/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/406366ded541a09285ea1868df92979e/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/12c8f914d4f9f9d002361ae7df8b90dd/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/12c8f914d4f9f9d002361ae7df8b90dd/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/d603b5e2ca848cd8c536c290f47b53f0/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/d603b5e2ca848cd8c536c290f47b53f0/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/83cfdd046486d66ad3b8edd802c71471/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/83cfdd046486d66ad3b8edd802c71471/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/d86780e5e95fee1638ceb56a33c1552f/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/d86780e5e95fee1638ceb56a33c1552f/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/9345f4faa30e6160b84f3b8444802852/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/9345f4faa30e6160b84f3b8444802852/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/329e216a0279121f44d227b4bc9bdfe5/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/329e216a0279121f44d227b4bc9bdfe5/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/66c3867635903f2f7e1387ad7b61a1c9/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/66c3867635903f2f7e1387ad7b61a1c9/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/5b3b9fa1de35a3f70e72ecbd5ab71742/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/5b3b9fa1de35a3f70e72ecbd5ab71742/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/1f7b3a8c2b1f2a11798afff9a1f86d52/transformed/lifecycle-livedata-core-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/1f7b3a8c2b1f2a11798afff9a1f86d52/transformed/lifecycle-livedata-core-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/573c1698466cf1ffc715501508347855/transformed/lifecycle-livedata-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/573c1698466cf1ffc715501508347855/transformed/lifecycle-livedata-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e45be401258baee04d9f085e9d159e80/transformed/lifecycle-livedata-core-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e45be401258baee04d9f085e9d159e80/transformed/lifecycle-livedata-core-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/95bb5a75bf8df932907e2a7d7baab083/transformed/lifecycle-viewmodel-2.8.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/95bb5a75bf8df932907e2a7d7baab083/transformed/lifecycle-viewmodel-2.8.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/320a26505bab6c1eec5f3019dfba1b4d/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/320a26505bab6c1eec5f3019dfba1b4d/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/f950e4af174f61edd48167d4194074c2/transformed/lifecycle-viewmodel-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/f950e4af174f61edd48167d4194074c2/transformed/lifecycle-viewmodel-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/765c338814e5da2538ac6fdbb9a24cc0/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/765c338814e5da2538ac6fdbb9a24cc0/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/a2d19c0ec8de7a2077e62e23687ee32b/transformed/lifecycle-viewmodel-savedstate-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/a2d19c0ec8de7a2077e62e23687ee32b/transformed/lifecycle-viewmodel-savedstate-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/de816b6b2d76cd45f35232d9b6bd2ad0/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/de816b6b2d76cd45f35232d9b6bd2ad0/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/025ea66404276c5ec2250f10f22aabb5/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/025ea66404276c5ec2250f10f22aabb5/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/abf7c71cf2eabb302c5ac2ec3ab1c791/transformed/lifecycle-service-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/abf7c71cf2eabb302c5ac2ec3ab1c791/transformed/lifecycle-service-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/b5455c34f5460c8371b97fa45c77d614/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/b5455c34f5460c8371b97fa45c77d614/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/KABILAN/.gradle/caches/transforms-4/844655f7b08a189a0c0d1221342a6763/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/KABILAN/.gradle/caches/transforms-4/844655f7b08a189a0c0d1221342a6763/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/52448b7211378d2f6bf6829b4ef821d9/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/52448b7211378d2f6bf6829b4ef821d9/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/5a8742a694d69dafb8d7fa98d815251d/transformed/activity-compose-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/5a8742a694d69dafb8d7fa98d815251d/transformed/activity-compose-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/438263786e1d2425b3ddec5cea2c6c37/transformed/activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/438263786e1d2425b3ddec5cea2c6c37/transformed/activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/0c6cdc9573ae95a3067da080f5a54244/transformed/activity-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.0] /Users/KABILAN/.gradle/caches/transforms-4/0c6cdc9573ae95a3067da080f5a54244/transformed/activity-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/c4d9f65968c99360e3fcf2269e2d6d0d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/c4d9f65968c99360e3fcf2269e2d6d0d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/358af5de60bb89da529d7ad5b2c69c6f/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/358af5de60bb89da529d7ad5b2c69c6f/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/f93f714b74af71fd105f064d65294552/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/f93f714b74af71fd105f064d65294552/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/c0bb8a29a78a50adb9e80d80d5478d6c/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/c0bb8a29a78a50adb9e80d80d5478d6c/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/KABILAN/.gradle/caches/transforms-4/b99b48a78eefe50f5257d0d75ae95b6a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/KABILAN/.gradle/caches/transforms-4/b99b48a78eefe50f5257d0d75ae95b6a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/KABILAN/.gradle/caches/transforms-4/9958c8eb2c1ea9e4622114dccb8b9fa4/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/KABILAN/.gradle/caches/transforms-4/9958c8eb2c1ea9e4622114dccb8b9fa4/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/f71858453a0ae231539e28ecc9be36ad/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/f71858453a0ae231539e28ecc9be36ad/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/157cedf09e52495da0b3da510210b0aa/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/157cedf09e52495da0b3da510210b0aa/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-splashscreen:1.0.1] /Users/KABILAN/.gradle/caches/transforms-4/8dc0f929a5da2724dedbebd99a9dff5a/transformed/core-splashscreen-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.1] /Users/KABILAN/.gradle/caches/transforms-4/8dc0f929a5da2724dedbebd99a9dff5a/transformed/core-splashscreen-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/141b0b9c1799d88ff31817cf128c20f6/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/141b0b9c1799d88ff31817cf128c20f6/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [no.nordicsemi.android:ble-ktx:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/947346e6f6853be19a30553a61c5d8e5/transformed/ble-ktx-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [no.nordicsemi.android:ble-ktx:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/947346e6f6853be19a30553a61c5d8e5/transformed/ble-ktx-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/5bff348b0e78c1422b502ee70a6d7770/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/5bff348b0e78c1422b502ee70a6d7770/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/052bd5add7413ecf30c7e26557243206/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/052bd5add7413ecf30c7e26557243206/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/607d408e7b64872bc82a63cf86b5003b/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/607d408e7b64872bc82a63cf86b5003b/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/612bb55d27ccc811005137c36c606842/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/612bb55d27ccc811005137c36c606842/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/830dfdec80b9c00b890cb221b7093566/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/830dfdec80b9c00b890cb221b7093566/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.timber:timber:5.0.1] /Users/KABILAN/.gradle/caches/transforms-4/614f44df60c4c613798564f4934bd4a7/transformed/timber-5.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.timber:timber:5.0.1] /Users/KABILAN/.gradle/caches/transforms-4/614f44df60c4c613798564f4934bd4a7/transformed/timber-5.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/KABILAN/.gradle/caches/transforms-4/5d77800156ca7d3ae3ac2e1f087232ec/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/KABILAN/.gradle/caches/transforms-4/5d77800156ca7d3ae3ac2e1f087232ec/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/KABILAN/.gradle/caches/transforms-4/202a8861438e511e31f4ed2e89581a97/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/KABILAN/.gradle/caches/transforms-4/202a8861438e511e31f4ed2e89581a97/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/KABILAN/.gradle/caches/transforms-4/0bd572d896a0dfbc4103a527b77839fa/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/KABILAN/.gradle/caches/transforms-4/0bd572d896a0dfbc4103a527b77839fa/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [no.nordicsemi.android:ble:2.7.5] /Users/KABILAN/.gradle/caches/transforms-4/81632d922b97c28e7b44303296d38411/transformed/ble-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/KABILAN/.gradle/caches/transforms-4/3d90c172f09d8a0b5616c5342cec5402/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/KABILAN/.gradle/caches/transforms-4/3d90c172f09d8a0b5616c5342cec5402/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/fee20cefa8b040996338f2b9cde69ce0/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/fee20cefa8b040996338f2b9cde69ce0/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/00556e8e21a3553b717380e6f4b1627f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/00556e8e21a3553b717380e6f4b1627f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/KABILAN/.gradle/caches/transforms-4/05da040e4510ffb1db7980d6e6ed3c73/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/486cab2b6aaf0b2c4f8052b94d232177/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/486cab2b6aaf0b2c4f8052b94d232177/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/KABILAN/.gradle/caches/transforms-4/e92edf74ac9b1caff8819b98055f3edd/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/KABILAN/.gradle/caches/transforms-4/e92edf74ac9b1caff8819b98055f3edd/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/318ddfe4cc4001e4a74060945b584718/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/KABILAN/.gradle/caches/transforms-4/318ddfe4cc4001e4a74060945b584718/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] /Users/KABILAN/.gradle/caches/transforms-4/9d1ffada2b4ea509149994f882e67f75/transformed/dagger-lint-aar-2.51.1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] /Users/KABILAN/.gradle/caches/transforms-4/9d1ffada2b4ea509149994f882e67f75/transformed/dagger-lint-aar-2.51.1/AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/KABILAN/Desktop/Diskey/app/src/main/AndroidManifest.xml
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:44:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:45:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:52:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:58:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/KABILAN/.gradle/caches/transforms-4/89a700a71d55032d9a04a4bccb9f75d5/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/KABILAN/.gradle/caches/transforms-4/68d586e7aa1a9d56f288b00ed50930a0/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.3] /Users/KABILAN/.gradle/caches/transforms-4/e97a4c3ddcd748b1cc6c0233ec292d10/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:30:17-78
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/4e265c2f94789f497a9674b7f078192b/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:24:13-63
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.8] /Users/KABILAN/.gradle/caches/transforms-4/94a9a042ac952122eaa6ede0f1458677/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.cyboglabs.diskey.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.cyboglabs.diskey.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/KABILAN/.gradle/caches/transforms-4/e5d2cdcc58d4fbd727b9ffe2c29564c4/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/KABILAN/.gradle/caches/transforms-4/1e9e34805661c101dd01ee6c3bc5c797/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/KABILAN/.gradle/caches/transforms-4/02fab6049a4ceb917dc50d1fd61294a2/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
