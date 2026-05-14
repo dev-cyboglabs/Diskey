@@ -31,7 +31,8 @@ data class DashboardUiState(
     val batteryLevel: Int = -1,
     val isWifiEnabled: Boolean = false,
     val syncState: SyncState = SyncState(),
-    val deviceAddress: String = ""
+    val deviceAddress: String = "",
+    val deviceName: String = ""
 ) {
     val isSyncing: Boolean get() = syncState.phase == SyncPhase.FETCHING_LIST ||
         syncState.phase == SyncPhase.DOWNLOADING
@@ -52,7 +53,7 @@ class DashboardViewModel @Inject constructor(
         observeConnectionState()
         observeBattery()
         observeSync()
-        loadPairedAddress()
+        loadPairedDevice()
     }
 
     private fun observeConnectionState() {
@@ -89,10 +90,11 @@ class DashboardViewModel @Inject constructor(
         }
     }
 
-    private fun loadPairedAddress() {
+    private fun loadPairedDevice() {
         viewModelScope.launch {
             val address = appPreferences.pairedAddress.first() ?: ""
-            _uiState.update { it.copy(deviceAddress = address) }
+            val name = appPreferences.pairedName.first() ?: ""
+            _uiState.update { it.copy(deviceAddress = address, deviceName = name) }
         }
     }
 

@@ -891,9 +891,10 @@ int drawable notification_template_icon_bg 0x7f0800c2
 int drawable notification_template_icon_low_bg 0x7f0800c3
 int drawable notification_tile_bg 0x7f0800c4
 int drawable notify_panel_notification_icon_bg 0x7f0800c5
-int drawable test_level_drawable 0x7f0800c6
-int drawable tooltip_frame_dark 0x7f0800c7
-int drawable tooltip_frame_light 0x7f0800c8
+int drawable pendant_device 0x7f0800c6
+int drawable test_level_drawable 0x7f0800c7
+int drawable tooltip_frame_dark 0x7f0800c8
+int drawable tooltip_frame_light 0x7f0800c9
 int font roboto_medium_numbers 0x7f090000
 int id ALT 0x7f0a0000
 int id CTRL 0x7f0a0001

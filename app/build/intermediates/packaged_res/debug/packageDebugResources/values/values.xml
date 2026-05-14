@@ -11,8 +11,7 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
     <style name="Theme.Diskey.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#0A0E1A</item>
-        <item name="windowSplashScreenAnimatedIcon">@android:drawable/ic_menu_info_details</item>
+        <item name="windowSplashScreenBackground">#000000</item>
         <item name="postSplashScreenTheme">@style/Theme.Diskey</item>
     </style>
 </resources>

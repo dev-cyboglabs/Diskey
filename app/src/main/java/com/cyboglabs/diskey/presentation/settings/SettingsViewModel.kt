@@ -2,13 +2,18 @@ package com.cyboglabs.diskey.presentation.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.cyboglabs.diskey.ble.BleConnectionManager
 import com.cyboglabs.diskey.data.datastore.AppPreferences
+import com.cyboglabs.diskey.domain.repository.AudioFileRepository
+import com.cyboglabs.diskey.domain.repository.DeviceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 data class SettingsUiState(
@@ -23,22 +28,34 @@ data class SettingsUiState(
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
-    private val appPreferences: AppPreferences
+    private val appPreferences: AppPreferences,
+    private val bleConnectionManager: BleConnectionManager,
+    private val deviceRepository: DeviceRepository,
+    private val audioFileRepository: AudioFileRepository
 ) : ViewModel() {
 
     val uiState: StateFlow<SettingsUiState> = combine(
-        appPreferences.autoReconnect,
-        appPreferences.saveWav,
-        appPreferences.screenTimeoutMin,
-        appPreferences.autoPowerOffMin,
-        appPreferences.darkMode
-    ) { autoReconnect, saveWav, screenTimeout, autoPowerOff, darkMode ->
-        SettingsUiState(
-            autoReconnect = autoReconnect,
-            saveWav = saveWav,
-            screenTimeoutMin = screenTimeout,
-            autoPowerOffMin = autoPowerOff,
-            darkMode = darkMode
+        combine(
+            appPreferences.autoReconnect,
+            appPreferences.saveWav,
+            appPreferences.screenTimeoutMin,
+            appPreferences.autoPowerOffMin,
+            appPreferences.darkMode
+        ) { autoReconnect, saveWav, screenTimeout, autoPowerOff, darkMode ->
+            SettingsUiState(
+                autoReconnect = autoReconnect,
+                saveWav = saveWav,
+                screenTimeoutMin = screenTimeout,
+                autoPowerOffMin = autoPowerOff,
+                darkMode = darkMode
+            )
+        },
+        appPreferences.pairedAddress,
+        appPreferences.pairedName
+    ) { state, pairedAddress, pairedName ->
+        state.copy(
+            pairedDeviceAddress = pairedAddress,
+            pairedDeviceName = pairedName
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), SettingsUiState())
 
@@ -63,6 +80,33 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun clearPairing() = viewModelScope.launch {
-        appPreferences.clearPairing()
+        try {
+            // Get paired device address before clearing
+            val pairedAddress = appPreferences.pairedAddress.first()
+            
+            Timber.d("SettingsViewModel: clearing pairing for device: $pairedAddress")
+            
+            // 1. Disconnect BLE connection
+            bleConnectionManager.disconnect()
+            Timber.d("SettingsViewModel: disconnected BLE")
+            
+            // 2. Clear preferences (paired address, name, device UUID)
+            appPreferences.clearPairing()
+            Timber.d("SettingsViewModel: cleared preferences")
+            
+            // 3. Delete device from database if address exists
+            if (pairedAddress != null) {
+                deviceRepository.deleteDevice(pairedAddress)
+                Timber.d("SettingsViewModel: deleted device from DB")
+                
+                // 4. Delete all audio files for this device
+                audioFileRepository.deleteAllForDevice(pairedAddress)
+                Timber.d("SettingsViewModel: deleted audio files")
+            }
+            
+            Timber.i("SettingsViewModel: ✓ pairing cleared successfully")
+        } catch (e: Exception) {
+            Timber.e(e, "SettingsViewModel: failed to clear pairing")
+        }
     }
 }

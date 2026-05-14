@@ -5,9 +5,6 @@ import androidx.navigation.NavHostController;
 import com.cyboglabs.diskey.presentation.debug.DebugScreen;
 import com.cyboglabs.diskey.presentation.ota.OtaScreen;
 import com.cyboglabs.diskey.presentation.player.AudioPlayerScreen;
-import com.cyboglabs.diskey.presentation.scan.ScanScreen;
-import com.cyboglabs.diskey.presentation.settings.SettingsScreen;
-import com.cyboglabs.diskey.presentation.splash.SplashScreen;
 
 @kotlin.Metadata(mv = {1, 9, 0}, k = 2, xi = 48, d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u001a\u0010\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0007\u00a8\u0006\u0004"}, d2 = {"DisKeyNavHost", "", "navController", "Landroidx/navigation/NavHostController;", "app_debug"})
 public final class NavigationKt {

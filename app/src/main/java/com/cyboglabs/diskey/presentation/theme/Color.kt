@@ -2,40 +2,40 @@ package com.cyboglabs.diskey.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Primary palette — deep indigo/teal for audio equipment feel
-val Primary = Color(0xFF4F6EF7)
-val PrimaryDark = Color(0xFF3A55D4)
-val PrimaryContainer = Color(0xFF1A237E)
-val OnPrimary = Color(0xFFFFFFFF)
+// Monochrome palette — Black, White, and Gray only
+val Primary = Color(0xFFFFFFFF)  // White
+val PrimaryDark = Color(0xFFE0E0E0)  // Light Gray
+val PrimaryContainer = Color(0xFF424242)  // Dark Gray
+val OnPrimary = Color(0xFF000000)  // Black
 
-val Secondary = Color(0xFF00BCD4)
-val SecondaryContainer = Color(0xFF006064)
-val OnSecondary = Color(0xFF000000)
+val Secondary = Color(0xFFBDBDBD)  // Medium Gray
+val SecondaryContainer = Color(0xFF616161)  // Dark Medium Gray
+val OnSecondary = Color(0xFFFFFFFF)  // White
 
-val Tertiary = Color(0xFF4CAF50)
-val TertiaryContainer = Color(0xFF1B5E20)
+val Tertiary = Color(0xFF9E9E9E)  // Gray
+val TertiaryContainer = Color(0xFF757575)  // Medium Dark Gray
 
-// Surface colours
-val Background = Color(0xFF0A0E1A)
-val Surface = Color(0xFF121929)
-val SurfaceVariant = Color(0xFF1E2A3A)
-val SurfaceElevated = Color(0xFF1A2433)
+// Surface colours - Pure Black and Dark Gray theme
+val Background = Color(0xFF000000)  // Pure Black
+val Surface = Color(0xFF1A1A1A)  // Very Dark Gray
+val SurfaceVariant = Color(0xFF2A2A2A)  // Dark Gray
+val SurfaceElevated = Color(0xFF333333)  // Medium Dark Gray
 
-val OnBackground = Color(0xFFE8EAF6)
-val OnSurface = Color(0xFFB0BEC5)
-val OnSurfaceVariant = Color(0xFF7986CB)
+val OnBackground = Color(0xFFFFFFFF)  // White
+val OnSurface = Color(0xFFE0E0E0)  // Light Gray
+val OnSurfaceVariant = Color(0xFFBDBDBD)  // Medium Gray
 
-// Status colours
-val Success = Color(0xFF4CAF50)
-val Warning = Color(0xFFFF9800)
-val Error = Color(0xFFCF6679)
-val Recording = Color(0xFFFF5252)
-val Connected = Color(0xFF69F0AE)
-val Disconnected = Color(0xFF757575)
+// Status colours - Grayscale
+val Success = Color(0xFFE0E0E0)  // Light Gray
+val Warning = Color(0xFFBDBDBD)  // Medium Gray
+val Error = Color(0xFF9E9E9E)  // Gray
+val Recording = Color(0xFFFFFFFF)  // White
+val Connected = Color(0xFFFFFFFF)  // White
+val Disconnected = Color(0xFF757575)  // Dark Gray
 
 // Waveform
-val WaveformActive = Color(0xFF4F6EF7)
-val WaveformInactive = Color(0xFF1E2A3A)
+val WaveformActive = Color(0xFFFFFFFF)  // White
+val WaveformInactive = Color(0xFF2A2A2A)  // Dark Gray
 
 // Light theme variants
 val PrimaryLight = Color(0xFF3F51B5)

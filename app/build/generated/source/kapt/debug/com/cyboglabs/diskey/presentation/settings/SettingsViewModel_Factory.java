@@ -1,6 +1,9 @@
 package com.cyboglabs.diskey.presentation.settings;
 
+import com.cyboglabs.diskey.ble.BleConnectionManager;
 import com.cyboglabs.diskey.data.datastore.AppPreferences;
+import com.cyboglabs.diskey.domain.repository.AudioFileRepository;
+import com.cyboglabs.diskey.domain.repository.DeviceRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;
@@ -25,20 +28,37 @@ import javax.inject.Provider;
 public final class SettingsViewModel_Factory implements Factory<SettingsViewModel> {
   private final Provider<AppPreferences> appPreferencesProvider;
 
-  public SettingsViewModel_Factory(Provider<AppPreferences> appPreferencesProvider) {
+  private final Provider<BleConnectionManager> bleConnectionManagerProvider;
+
+  private final Provider<DeviceRepository> deviceRepositoryProvider;
+
+  private final Provider<AudioFileRepository> audioFileRepositoryProvider;
+
+  public SettingsViewModel_Factory(Provider<AppPreferences> appPreferencesProvider,
+      Provider<BleConnectionManager> bleConnectionManagerProvider,
+      Provider<DeviceRepository> deviceRepositoryProvider,
+      Provider<AudioFileRepository> audioFileRepositoryProvider) {
     this.appPreferencesProvider = appPreferencesProvider;
+    this.bleConnectionManagerProvider = bleConnectionManagerProvider;
+    this.deviceRepositoryProvider = deviceRepositoryProvider;
+    this.audioFileRepositoryProvider = audioFileRepositoryProvider;
   }
 
   @Override
   public SettingsViewModel get() {
-    return newInstance(appPreferencesProvider.get());
+    return newInstance(appPreferencesProvider.get(), bleConnectionManagerProvider.get(), deviceRepositoryProvider.get(), audioFileRepositoryProvider.get());
   }
 
-  public static SettingsViewModel_Factory create(Provider<AppPreferences> appPreferencesProvider) {
-    return new SettingsViewModel_Factory(appPreferencesProvider);
+  public static SettingsViewModel_Factory create(Provider<AppPreferences> appPreferencesProvider,
+      Provider<BleConnectionManager> bleConnectionManagerProvider,
+      Provider<DeviceRepository> deviceRepositoryProvider,
+      Provider<AudioFileRepository> audioFileRepositoryProvider) {
+    return new SettingsViewModel_Factory(appPreferencesProvider, bleConnectionManagerProvider, deviceRepositoryProvider, audioFileRepositoryProvider);
   }
 
-  public static SettingsViewModel newInstance(AppPreferences appPreferences) {
-    return new SettingsViewModel(appPreferences);
+  public static SettingsViewModel newInstance(AppPreferences appPreferences,
+      BleConnectionManager bleConnectionManager, DeviceRepository deviceRepository,
+      AudioFileRepository audioFileRepository) {
+    return new SettingsViewModel(appPreferences, bleConnectionManager, deviceRepository, audioFileRepository);
   }
 }

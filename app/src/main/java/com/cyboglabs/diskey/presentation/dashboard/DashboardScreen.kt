@@ -1,6 +1,7 @@
 package com.cyboglabs.diskey.presentation.dashboard
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -48,6 +49,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import com.cyboglabs.diskey.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -175,14 +178,26 @@ private fun DeviceStatusCard(state: DashboardUiState) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    "T240 Recorder",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        state.deviceName.ifBlank { "Device" },
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.weight(1f)
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.pendant_device),
+                        contentDescription = "Device",
+                        modifier = Modifier.size(62.dp)
+                    )
+                }
                 Text(
                     state.connectionState.name.replace("_", " "),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodySmall,
                     color = when (state.connectionState) {
                         ConnectionState.CONNECTED -> Connected
                         ConnectionState.ERROR -> MaterialTheme.colorScheme.error
@@ -195,11 +210,7 @@ private fun DeviceStatusCard(state: DashboardUiState) {
                         Icon(
                             Icons.Default.BatteryFull,
                             null,
-                            tint = when {
-                                state.batteryLevel > 50 -> Connected
-                                state.batteryLevel > 20 -> Primary
-                                else -> MaterialTheme.colorScheme.error
-                            },
+                            tint = androidx.compose.ui.graphics.Color(0xFF4CAF50),
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(Modifier.width(4.dp))

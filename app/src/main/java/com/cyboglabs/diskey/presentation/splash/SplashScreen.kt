@@ -13,7 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.BluetoothSearching
+import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -38,7 +38,10 @@ import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun SplashScreen(onNavigateToScan: () -> Unit) {
+fun SplashScreen(
+    onNavigateToScan: () -> Unit,
+    onNavigateToDashboard: () -> Unit
+) {
     val context = LocalContext.current
     val permissions = PermissionUtils.getRequiredBlePermissions().toList() +
         PermissionUtils.getRequiredNotificationPermissions().toList()
@@ -52,12 +55,22 @@ fun SplashScreen(onNavigateToScan: () -> Unit) {
 
     LaunchedEffect(Unit) {
         visible = true
-        delay(300)
+        delay(200)
         if (!permissionsState.allPermissionsGranted) {
             permissionsState.launchMultiplePermissionRequest()
         }
-        delay(1500)
-        onNavigateToScan()
+        delay(800)
+        
+        // Check if device is paired
+        val bluetoothManager = context.getSystemService(Context.BLUETOOTH_SERVICE) as? BluetoothManager
+        val adapter = bluetoothManager?.adapter
+        val hasPairedDevices = adapter?.bondedDevices?.isNotEmpty() == true
+        
+        if (hasPairedDevices) {
+            onNavigateToDashboard()
+        } else {
+            onNavigateToScan()
+        }
     }
 
     Column(
@@ -69,9 +82,9 @@ fun SplashScreen(onNavigateToScan: () -> Unit) {
         verticalArrangement = Arrangement.Center
     ) {
         Icon(
-            imageVector = Icons.Default.BluetoothSearching,
+            imageVector = Icons.Default.Bluetooth,
             contentDescription = "Diskey",
-            tint = Primary,
+            tint = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.size(96.dp)
         )
         Spacer(Modifier.height(24.dp))
@@ -84,7 +97,7 @@ fun SplashScreen(onNavigateToScan: () -> Unit) {
         )
         Spacer(Modifier.height(8.dp))
         Text(
-            text = "T240 Audio Recorder",
+            text = "Audio Recorder",
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurface
         )

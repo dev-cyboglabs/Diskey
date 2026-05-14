@@ -44,6 +44,14 @@ fun SettingsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     var showClearPairingDialog by remember { mutableStateOf(false) }
+    
+    // Navigate back after clearing pairing
+    androidx.compose.runtime.LaunchedEffect(state.pairedDeviceAddress) {
+        // If pairing was cleared (address became null), go back to dashboard
+        if (state.pairedDeviceAddress == null && !showClearPairingDialog) {
+            timber.log.Timber.d("SettingsScreen: pairing cleared, navigating back")
+        }
+    }
 
     if (showClearPairingDialog) {
         AlertDialog(
@@ -51,7 +59,13 @@ fun SettingsScreen(
             title = { Text("Clear Pairing") },
             text = { Text("This will forget the paired device. You will need to reconnect manually.") },
             confirmButton = {
-                TextButton(onClick = { viewModel.clearPairing(); showClearPairingDialog = false }) {
+                TextButton(onClick = {
+                    timber.log.Timber.d("SettingsScreen: Clear Pairing button clicked")
+                    viewModel.clearPairing()
+                    showClearPairingDialog = false
+                    // Navigate back to dashboard after clearing
+                    onBack()
+                }) {
                     Text("Clear", color = MaterialTheme.colorScheme.error)
                 }
             },
@@ -131,7 +145,10 @@ fun SettingsScreen(
 
             SettingsSection("Device") {
                 TextButton(
-                    onClick = { showClearPairingDialog = true },
+                    onClick = { 
+                        timber.log.Timber.d("SettingsScreen: Clear Pairing Data button clicked")
+                        showClearPairingDialog = true 
+                    },
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text("Clear Pairing Data", color = MaterialTheme.colorScheme.error)

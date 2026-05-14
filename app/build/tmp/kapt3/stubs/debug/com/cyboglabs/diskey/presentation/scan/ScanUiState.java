@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 import com.cyboglabs.diskey.ble.BleConnectionManager;
 import com.cyboglabs.diskey.ble.BleService;
 import com.cyboglabs.diskey.ble.scanner.BleScanner;
+import com.cyboglabs.diskey.data.datastore.AppPreferences;
 import com.cyboglabs.diskey.domain.model.ConnectionState;
 import com.cyboglabs.diskey.domain.model.Device;
 import com.cyboglabs.diskey.domain.repository.DeviceRepository;

@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.cyboglabs.diskey.ble.BleConnectionManager
 import com.cyboglabs.diskey.ble.BleService
 import com.cyboglabs.diskey.ble.scanner.BleScanner
+import com.cyboglabs.diskey.data.datastore.AppPreferences
 import com.cyboglabs.diskey.domain.model.ConnectionState
 import com.cyboglabs.diskey.domain.model.Device
 import com.cyboglabs.diskey.domain.repository.DeviceRepository
@@ -39,7 +40,8 @@ class ScanViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val bleScanner: BleScanner,
     private val bleConnectionManager: BleConnectionManager,
-    private val deviceRepository: DeviceRepository
+    private val deviceRepository: DeviceRepository,
+    private val appPreferences: AppPreferences
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ScanUiState())
@@ -83,6 +85,11 @@ class ScanViewModel @Inject constructor(
     fun connect(device: Device) {
         stopScan()
         _uiState.update { it.copy(connectingAddress = device.address) }
+
+        // Save device name to preferences
+        viewModelScope.launch {
+            appPreferences.savePairedDevice(device.address, device.name)
+        }
 
         // Start BLE foreground service
         val intent = Intent(context, BleService::class.java).apply {

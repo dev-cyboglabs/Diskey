@@ -329,3 +329,10 @@ Unit tests cover:
 - [ ] Multi-device support (currently assumes single paired device)
 - [ ] Device rename command (send via BLE settings characteristic)
 - [ ] Export logs feature (write Timber log buffer to file)
+
+# Build cmd
+```bash
+./gradlew installDebug --no-configuration-cache
+
+
+```
