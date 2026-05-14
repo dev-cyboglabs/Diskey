@@ -13,6 +13,7 @@ import androidx.media3.common.Player
 import androidx.media3.common.PlaybackException
 import androidx.media3.exoplayer.ExoPlayer
 import com.cyboglabs.diskey.audio.OpusConverter
+import com.cyboglabs.diskey.audio.OggOpusWrapper
 import com.cyboglabs.diskey.domain.repository.AudioFileRepository
 import com.cyboglabs.diskey.utils.FileUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -70,11 +71,18 @@ class AudioPlayerViewModel @Inject constructor(
             }
 
             val headerHex = runCatching {
-                val buf = ByteArray(16)
+                val buf = ByteArray(32)
                 val n = opusFile.inputStream().use { it.read(buf) }
                 if (n <= 0) "" else buf.copyOf(n).joinToString(" ") { b -> "%02X".format(b) }
             }.getOrDefault("")
-            Timber.d("AudioPlayerViewModel: file='${opusFile.name}' size=${opusFile.length()}B header=$headerHex")
+            val headerAscii = runCatching {
+                val buf = ByteArray(32)
+                val n = opusFile.inputStream().use { it.read(buf) }
+                if (n <= 0) "" else buf.copyOf(n).map { if (it in 32..126) it.toInt().toChar() else '.' }.joinToString("")
+            }.getOrDefault("")
+            Timber.w("AudioPlayerViewModel: file='${opusFile.name}' size=${opusFile.length()}B")
+            Timber.w("AudioPlayerViewModel: header HEX: $headerHex")
+            Timber.w("AudioPlayerViewModel: header ASCII: $headerAscii")
 
             val isOggContainer = runCatching {
                 val buf = ByteArray(4)
@@ -82,26 +90,47 @@ class AudioPlayerViewModel @Inject constructor(
                 n == 4 && buf.contentEquals(byteArrayOf('O'.code.toByte(), 'g'.code.toByte(), 'g'.code.toByte(), 'S'.code.toByte()))
             }.getOrDefault(false)
 
-            // Try direct OPUS playback first; fall back to WAV conversion
-            val playbackFile = if (canPlayOpusDirect(isOggContainer)) {
-                opusFile
-            } else {
-                Timber.d("AudioPlayerViewModel: converting OPUS → WAV")
-                val wavFile = FileUtils.getWavFile(context, filename)
-                opusConverter.ensureWav(opusFile, wavFile) ?: run {
-                    _uiState.update { it.copy(isLoading = false, error = "Conversion failed") }
-                    return@launch
-                }
-            }
+            val metaDurationMs = runCatching { audioFileRepository.getFile(filename)?.durationMs ?: 0L }
+                .getOrDefault(0L)
 
-            if (playbackFile == opusFile && !isOggContainer) {
-                _uiState.update {
-                    it.copy(
-                        isLoading = false,
-                        error = "Unsupported OPUS format (not OGG container). Please re-download or enable OPUS→WAV conversion."
-                    )
+            // Determine playback strategy based on file format
+            val playbackFile = when {
+                // Already OGG Opus - play directly
+                isOggContainer -> {
+                    Timber.d("AudioPlayerViewModel: OGG Opus detected, playing directly")
+                    opusFile
                 }
-                return@launch
+                
+                // Raw Opus - wrap into OGG container (fixed-size frames)
+                else -> {
+                    val frameDurationMs = 20
+                    val inferredFrameCount = if (metaDurationMs > 0L) {
+                        ((metaDurationMs + (frameDurationMs / 2)) / frameDurationMs).coerceAtLeast(1L)
+                    } else {
+                        0L
+                    }
+                    val inferredFrameSize = if (inferredFrameCount > 0L) {
+                        val size = (opusFile.length() / inferredFrameCount).toInt()
+                        if (size > 0) size else 80
+                    } else {
+                        80
+                    }
+
+                    Timber.d(
+                        "AudioPlayerViewModel: Raw Opus detected; durationMs=$metaDurationMs inferredFrameSize=$inferredFrameSize"
+                    )
+
+                    val oggFile = File(opusFile.parent, opusFile.nameWithoutExtension + ".ogg")
+                    OggOpusWrapper.wrapRawOpus(
+                        rawOpusFile = opusFile,
+                        outputOggFile = oggFile,
+                        frameSizeBytes = inferredFrameSize,
+                        frameDurationMs = frameDurationMs
+                    ) ?: run {
+                        _uiState.update { it.copy(isLoading = false, error = "Failed to prepare audio file") }
+                        return@launch
+                    }
+                }
             }
 
             val exo = ExoPlayer.Builder(context).build().apply {
@@ -112,14 +141,10 @@ class AudioPlayerViewModel @Inject constructor(
                         .build(),
                     true
                 )
-                val mediaItem = if (playbackFile == opusFile) {
-                    MediaItem.Builder()
-                        .setUri(Uri.fromFile(playbackFile))
-                        .setMimeType(MimeTypes.AUDIO_OGG)
-                        .build()
-                } else {
-                    MediaItem.fromUri(Uri.fromFile(playbackFile))
-                }
+                val mediaItem = MediaItem.Builder()
+                    .setUri(Uri.fromFile(playbackFile))
+                    .setMimeType(MimeTypes.AUDIO_OGG)
+                    .build()
                 setMediaItem(mediaItem)
                 prepare()
                 addListener(object : Player.Listener {
@@ -150,9 +175,6 @@ class AudioPlayerViewModel @Inject constructor(
         }
     }
 
-    private fun canPlayOpusDirect(isOggContainer: Boolean): Boolean {
-        return isOggContainer
-    }
 
     private fun startPositionUpdater() {
         viewModelScope.launch {

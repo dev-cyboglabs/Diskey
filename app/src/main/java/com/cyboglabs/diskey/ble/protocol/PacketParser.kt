@@ -8,6 +8,7 @@ import com.cyboglabs.diskey.domain.model.FileCompletePacket
 import com.cyboglabs.diskey.domain.model.FileListPacket
 import com.cyboglabs.diskey.domain.model.BatteryPacket
 import com.cyboglabs.diskey.domain.model.OtaProgressPacket
+import com.cyboglabs.diskey.domain.model.RecordingStatusPacket
 import com.cyboglabs.diskey.domain.model.UnknownPacket
 import com.cyboglabs.diskey.utils.CrcUtils
 import timber.log.Timber
@@ -95,6 +96,14 @@ object PacketParser {
                 OtaProgressPacket(received)
             }
 
+            // Recording status: 0x02 0x14/0x15/0x16/0x17 0x00 [optional JSON]
+            type == 0x02.toByte() && isRecordingCmd(cmd) && sub == 0x00.toByte() -> {
+                val isRecording = cmd == BleCommand.CMD_START_RECORDING || cmd == BleCommand.CMD_RESUME_RECORDING
+                val jsonStr = if (raw.size > 3) raw.copyOfRange(3, raw.size).toString(Charset.forName("UTF-8")) else ""
+                Timber.v("PacketParser: Recording status - recording=$isRecording")
+                RecordingStatusPacket(isRecording, jsonStr)
+            }
+
             else -> {
                 Timber.d("PacketParser: unknown packet type=0x%02X cmd=0x%02X sub=0x%02X", type, cmd, sub)
                 UnknownPacket(raw)
@@ -105,5 +114,12 @@ object PacketParser {
     private fun isAudioCmd(type: Byte, cmd: Byte, sub: Byte): Boolean {
         val isAudioType = type == BleCommand.TYPE_CONTROL || type == 0x02.toByte()
         return isAudioType && cmd == BleCommand.CMD_DOWNLOAD_FILE && sub == 0x00.toByte()
+    }
+
+    private fun isRecordingCmd(cmd: Byte): Boolean {
+        return cmd == BleCommand.CMD_START_RECORDING ||
+               cmd == BleCommand.CMD_PAUSE_RECORDING ||
+               cmd == BleCommand.CMD_RESUME_RECORDING ||
+               cmd == BleCommand.CMD_STOP_RECORDING
     }
 }

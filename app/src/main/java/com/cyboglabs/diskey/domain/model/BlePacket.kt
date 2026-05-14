@@ -28,6 +28,11 @@ data class BatteryPacket(val levelPercent: Int) : BlePacket()
 
 data class OtaProgressPacket(val bytesReceived: Int) : BlePacket()
 
+data class RecordingStatusPacket(
+    val isRecording: Boolean,
+    val json: String = ""
+) : BlePacket()
+
 data class UnknownPacket(val raw: ByteArray) : BlePacket() {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
