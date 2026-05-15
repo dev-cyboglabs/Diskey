@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface AudioFileRepository {
     fun getFilesForDevice(deviceAddress: String): Flow<List<AudioFile>>
+    suspend fun getFilesForDeviceList(deviceAddress: String): List<AudioFile>
     fun getDownloadedFiles(): Flow<List<AudioFile>>
     suspend fun getFile(filename: String): AudioFile?
     suspend fun saveFiles(files: List<AudioFile>, deviceAddress: String)

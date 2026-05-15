@@ -43,6 +43,11 @@ object PacketBuilder {
         return byteArrayOf(BleCommand.TYPE_CONTROL, BleCommand.CMD_DOWNLOAD_FILE, 0x00) + nameBytes
     }
 
+    fun buildDeleteFilePacket(filename: String): ByteArray {
+        val nameBytes = filename.toByteArray(Charset.forName("UTF-8"))
+        return byteArrayOf(BleCommand.TYPE_CONTROL, BleCommand.CMD_DELETE_FILE, 0x00) + nameBytes
+    }
+
     fun handshakeResponse(timestamp: Long, appUuid: String): ByteArray {
         val json = """{"time":$timestamp,"uuid":"$appUuid"}"""
         val jsonBytes = json.toByteArray(Charset.forName("UTF-8"))

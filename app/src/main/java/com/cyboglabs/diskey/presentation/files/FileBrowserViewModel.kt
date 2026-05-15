@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.cyboglabs.diskey.audio.AudioDownloadService
 import com.cyboglabs.diskey.audio.SyncManager
 import com.cyboglabs.diskey.audio.SyncPhase
+import com.cyboglabs.diskey.ble.BleConnectionManager
 import com.cyboglabs.diskey.data.datastore.AppPreferences
 import com.cyboglabs.diskey.domain.model.AudioFile
 import com.cyboglabs.diskey.domain.repository.AudioFileRepository
@@ -19,6 +20,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -55,7 +57,8 @@ class FileBrowserViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val audioFileRepository: AudioFileRepository,
     private val syncManager: SyncManager,
-    private val appPreferences: AppPreferences
+    private val appPreferences: AppPreferences,
+    private val bleConnectionManager: BleConnectionManager
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(FileBrowserUiState())
@@ -74,7 +77,8 @@ class FileBrowserViewModel @Inject constructor(
     private fun loadFilesFromDatabase() {
         _uiState.update { it.copy(isLoading = true) }
         viewModelScope.launch {
-            val address = appPreferences.pairedAddress.first() ?: "current_device"
+            // Use same logic as DashboardViewModel: if no paired address, use "current_device"
+            val address = appPreferences.pairedAddress.first().orEmpty().ifBlank { "current_device" }
 
             audioFileRepository.getFilesForDevice(address).collect { dbFiles ->
                 // Cross-check each file against the actual filesystem
@@ -92,16 +96,38 @@ class FileBrowserViewModel @Inject constructor(
     }
 
     /**
-     * When the SyncManager finishes a sync cycle, refresh the file list
-     * so newly downloaded files show up as playable immediately.
+     * Force reload using one-shot query to get files directly from database
+     * This ensures files are loaded even if the Flow doesn't emit.
+     */
+    suspend fun forceReloadSync() {
+        _uiState.update { it.copy(isLoading = true) }
+        val address = appPreferences.pairedAddress.first().orEmpty().ifBlank { "current_device" }
+        Timber.d("FileBrowserViewModel: force reloading files for address: '$address'")
+        val dbFiles = audioFileRepository.getFilesForDeviceList(address)
+        Timber.d("FileBrowserViewModel: got ${dbFiles.size} files from database for address '$address'")
+        
+        // Cross-check each file against the actual filesystem
+        val enriched = dbFiles.map { file ->
+            val localFile = FileUtils.getOpusFile(context, file.filename)
+            file.copy(
+                isDownloaded = localFile.exists() && localFile.length() > 0L,
+                localPath = if (localFile.exists()) localFile.absolutePath else null
+            )
+        }
+        Timber.d("FileBrowserViewModel: after filesystem check - ${enriched.count { it.isDownloaded }} downloaded, ${enriched.count { !it.isDownloaded }} not downloaded")
+        _uiState.update { it.copy(files = enriched, isLoading = false) }
+    }
+
+    /**
+     * When the SyncManager finishes a sync cycle, reload the file list from database
+     * so newly synced files show up immediately.
      */
     private fun observeSyncCompletion() {
         viewModelScope.launch {
             syncManager.syncState.collect { syncState ->
                 if (syncState.phase == SyncPhase.COMPLETE) {
-                    // DB was already updated by SyncManager; the Flow above will auto-refresh
-                    // but force an immediate re-check of the filesystem
-                    refreshLocalFileState()
+                    // Reload files from database to get newly synced files
+                    loadFilesFromDatabase()
                 }
 
                 // Track which files are currently downloading so we can show a spinner
@@ -161,8 +187,73 @@ class FileBrowserViewModel @Inject constructor(
 
     fun clearSelection() = _uiState.update { it.copy(selectedFiles = emptySet()) }
 
+    // ─── Delete files ───────────────────────────────────────────────────────────
+
+    fun deleteFile(filename: String) {
+        viewModelScope.launch {
+            try {
+                // Delete from SD card via BLE
+                bleConnectionManager.deleteFile(filename)
+                Timber.d("FileBrowserViewModel: sent delete command to device for '$filename'")
+
+                // Delete from local filesystem
+                val localFile = FileUtils.getOpusFile(context, filename)
+                if (localFile.exists()) {
+                    localFile.delete()
+                    Timber.d("FileBrowserViewModel: deleted local file '$filename'")
+                }
+
+                // Delete from database
+                audioFileRepository.deleteFile(filename)
+                Timber.d("FileBrowserViewModel: deleted file from database '$filename'")
+
+                // Refresh file list
+                refreshLocalFileState()
+            } catch (e: Exception) {
+                Timber.e(e, "FileBrowserViewModel: failed to delete file '$filename'")
+            }
+        }
+    }
+
+    fun deleteSelected() {
+        viewModelScope.launch {
+            _uiState.value.selectedFiles.forEach { filename ->
+                try {
+                    // Delete from SD card via BLE
+                    bleConnectionManager.deleteFile(filename)
+                    Timber.d("FileBrowserViewModel: sent delete command to device for '$filename'")
+
+                    // Delete from local filesystem
+                    val localFile = FileUtils.getOpusFile(context, filename)
+                    if (localFile.exists()) {
+                        localFile.delete()
+                        Timber.d("FileBrowserViewModel: deleted local file '$filename'")
+                    }
+
+                    // Delete from database
+                    audioFileRepository.deleteFile(filename)
+                    Timber.d("FileBrowserViewModel: deleted file from database '$filename'")
+                } catch (e: Exception) {
+                    Timber.e(e, "FileBrowserViewModel: failed to delete file '$filename'")
+                }
+            }
+
+            // Clear selection and refresh
+            _uiState.update { it.copy(selectedFiles = emptySet()) }
+            refreshLocalFileState()
+        }
+    }
+
     // ─── Filtering / sorting ──────────────────────────────────────────────────
 
     fun setSearchQuery(query: String) = _uiState.update { it.copy(searchQuery = query) }
     fun setSortOrder(order: SortOrder) = _uiState.update { it.copy(sortOrder = order) }
+
+    // ─── Force reload ─────────────────────────────────────────────────────────
+
+    fun forceReload() {
+        viewModelScope.launch {
+            forceReloadSync()
+        }
+    }
 }

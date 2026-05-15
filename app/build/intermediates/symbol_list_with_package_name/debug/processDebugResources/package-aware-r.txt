@@ -783,6 +783,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable compat_splash_screen
 drawable compat_splash_screen_no_icon_background
+drawable diskey_logo
 drawable exo_edit_mode_logo
 drawable exo_ic_audiotrack
 drawable exo_ic_check

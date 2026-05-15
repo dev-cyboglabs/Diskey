@@ -262,4 +262,16 @@ class BleConnectionManager @Inject constructor(
     }
 
     fun sendCommand(bytes: ByteArray) = bleDeviceManager.sendCommand(bytes)
+
+    fun deleteFile(filename: String) {
+        scope.launch {
+            try {
+                val packet = PacketBuilder.buildDeleteFilePacket(filename)
+                bleDeviceManager.sendCommand(packet)
+                Timber.d("BleConnectionManager: sent delete command for '$filename'")
+            } catch (e: Exception) {
+                Timber.e(e, "BleConnectionManager: failed to send delete command for '$filename'")
+            }
+        }
+    }
 }

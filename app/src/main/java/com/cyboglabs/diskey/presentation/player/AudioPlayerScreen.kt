@@ -35,6 +35,7 @@ import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -60,6 +61,11 @@ fun AudioPlayerScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     var showSpeedMenu by remember { mutableStateOf(false) }
+
+    // Auto-play when screen opens
+    LaunchedEffect(Unit) {
+        viewModel.playPause()
+    }
 
     Scaffold(
         topBar = {

@@ -97,6 +97,13 @@ fun SettingsScreen(
                     checked = state.autoReconnect,
                     onCheckedChange = viewModel::setAutoReconnect
                 )
+                Spacer(Modifier.height(8.dp))
+                SettingsToggle(
+                    title = "Auto Sync",
+                    subtitle = "Automatically sync audio files when device connects",
+                    checked = state.autoSync,
+                    onCheckedChange = viewModel::setAutoSync
+                )
             }
 
             HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))

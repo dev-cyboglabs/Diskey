@@ -18,6 +18,7 @@ import javax.inject.Inject
 
 data class SettingsUiState(
     val autoReconnect: Boolean = true,
+    val autoSync: Boolean = true,
     val saveWav: Boolean = false,
     val screenTimeoutMin: Int = 5,
     val autoPowerOffMin: Int = 30,
@@ -37,17 +38,19 @@ class SettingsViewModel @Inject constructor(
     val uiState: StateFlow<SettingsUiState> = combine(
         combine(
             appPreferences.autoReconnect,
+            appPreferences.autoSync,
             appPreferences.saveWav,
             appPreferences.screenTimeoutMin,
             appPreferences.autoPowerOffMin,
             appPreferences.darkMode
-        ) { autoReconnect, saveWav, screenTimeout, autoPowerOff, darkMode ->
+        ) { values ->
             SettingsUiState(
-                autoReconnect = autoReconnect,
-                saveWav = saveWav,
-                screenTimeoutMin = screenTimeout,
-                autoPowerOffMin = autoPowerOff,
-                darkMode = darkMode
+                autoReconnect = values[0] as Boolean,
+                autoSync = values[1] as Boolean,
+                saveWav = values[2] as Boolean,
+                screenTimeoutMin = values[3] as Int,
+                autoPowerOffMin = values[4] as Int,
+                darkMode = values[5] as Boolean
             )
         },
         appPreferences.pairedAddress,
@@ -61,6 +64,10 @@ class SettingsViewModel @Inject constructor(
 
     fun setAutoReconnect(enabled: Boolean) = viewModelScope.launch {
         appPreferences.setAutoReconnect(enabled)
+    }
+
+    fun setAutoSync(enabled: Boolean) = viewModelScope.launch {
+        appPreferences.setAutoSync(enabled)
     }
 
     fun setSaveWav(enabled: Boolean) = viewModelScope.launch {

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 import com.cyboglabs.diskey.audio.AudioDownloadService;
 import com.cyboglabs.diskey.audio.SyncManager;
 import com.cyboglabs.diskey.audio.SyncPhase;
+import com.cyboglabs.diskey.ble.BleConnectionManager;
 import com.cyboglabs.diskey.data.datastore.AppPreferences;
 import com.cyboglabs.diskey.domain.model.AudioFile;
 import com.cyboglabs.diskey.domain.repository.AudioFileRepository;

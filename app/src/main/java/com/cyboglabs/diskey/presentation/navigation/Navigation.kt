@@ -57,9 +57,7 @@ fun DisKeyNavHost(navController: NavHostController) {
         composable(Screen.Dashboard.route) {
             DashboardScreen(
                 onNavigateToFiles = {
-                    navController.navigate(Screen.FileBrowser.route) {
-                        launchSingleTop = true
-                    }
+                    navController.navigate(Screen.FileBrowser.route)
                 },
                 onNavigateToSettings = { navController.navigate(Screen.Settings.route) },
                 onNavigateToOta = { navController.navigate(Screen.Ota.route) },
@@ -78,8 +76,7 @@ fun DisKeyNavHost(navController: NavHostController) {
                     navController.navigate(Screen.AudioPlayer.createRoute(filename))
                 },
                 onBack = {
-                    val popped = navController.popBackStack(Screen.Dashboard.route, inclusive = false)
-                    if (!popped) navController.popBackStack()
+                    navController.navigateUp()
                 }
             )
         }

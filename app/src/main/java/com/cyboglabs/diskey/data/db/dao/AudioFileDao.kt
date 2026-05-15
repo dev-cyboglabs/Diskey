@@ -12,6 +12,9 @@ interface AudioFileDao {
     @Query("SELECT * FROM audio_files WHERE deviceAddress = :deviceAddress ORDER BY createdAtEpoch DESC")
     fun getFilesForDevice(deviceAddress: String): Flow<List<AudioFileEntity>>
 
+    @Query("SELECT * FROM audio_files WHERE deviceAddress = :deviceAddress ORDER BY createdAtEpoch DESC")
+    suspend fun getFilesForDeviceList(deviceAddress: String): List<AudioFileEntity>
+
     @Query("SELECT * FROM audio_files WHERE filename = :filename LIMIT 1")
     suspend fun getFile(filename: String): AudioFileEntity?
 

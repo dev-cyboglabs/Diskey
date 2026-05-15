@@ -434,40 +434,40 @@ public final class DaggerDisKeyApplication_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_cyboglabs_diskey_presentation_ota_OtaViewModel = "com.cyboglabs.diskey.presentation.ota.OtaViewModel";
-
-      static String com_cyboglabs_diskey_presentation_debug_DebugViewModel = "com.cyboglabs.diskey.presentation.debug.DebugViewModel";
-
-      static String com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel = "com.cyboglabs.diskey.presentation.dashboard.DashboardViewModel";
-
-      static String com_cyboglabs_diskey_presentation_settings_SettingsViewModel = "com.cyboglabs.diskey.presentation.settings.SettingsViewModel";
+      static String com_cyboglabs_diskey_presentation_scan_ScanViewModel = "com.cyboglabs.diskey.presentation.scan.ScanViewModel";
 
       static String com_cyboglabs_diskey_presentation_player_AudioPlayerViewModel = "com.cyboglabs.diskey.presentation.player.AudioPlayerViewModel";
 
+      static String com_cyboglabs_diskey_presentation_ota_OtaViewModel = "com.cyboglabs.diskey.presentation.ota.OtaViewModel";
+
+      static String com_cyboglabs_diskey_presentation_settings_SettingsViewModel = "com.cyboglabs.diskey.presentation.settings.SettingsViewModel";
+
       static String com_cyboglabs_diskey_presentation_files_FileBrowserViewModel = "com.cyboglabs.diskey.presentation.files.FileBrowserViewModel";
 
-      static String com_cyboglabs_diskey_presentation_scan_ScanViewModel = "com.cyboglabs.diskey.presentation.scan.ScanViewModel";
+      static String com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel = "com.cyboglabs.diskey.presentation.dashboard.DashboardViewModel";
+
+      static String com_cyboglabs_diskey_presentation_debug_DebugViewModel = "com.cyboglabs.diskey.presentation.debug.DebugViewModel";
 
       @KeepFieldType
-      OtaViewModel com_cyboglabs_diskey_presentation_ota_OtaViewModel2;
-
-      @KeepFieldType
-      DebugViewModel com_cyboglabs_diskey_presentation_debug_DebugViewModel2;
-
-      @KeepFieldType
-      DashboardViewModel com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel2;
-
-      @KeepFieldType
-      SettingsViewModel com_cyboglabs_diskey_presentation_settings_SettingsViewModel2;
+      ScanViewModel com_cyboglabs_diskey_presentation_scan_ScanViewModel2;
 
       @KeepFieldType
       AudioPlayerViewModel com_cyboglabs_diskey_presentation_player_AudioPlayerViewModel2;
 
       @KeepFieldType
+      OtaViewModel com_cyboglabs_diskey_presentation_ota_OtaViewModel2;
+
+      @KeepFieldType
+      SettingsViewModel com_cyboglabs_diskey_presentation_settings_SettingsViewModel2;
+
+      @KeepFieldType
       FileBrowserViewModel com_cyboglabs_diskey_presentation_files_FileBrowserViewModel2;
 
       @KeepFieldType
-      ScanViewModel com_cyboglabs_diskey_presentation_scan_ScanViewModel2;
+      DashboardViewModel com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel2;
+
+      @KeepFieldType
+      DebugViewModel com_cyboglabs_diskey_presentation_debug_DebugViewModel2;
     }
   }
 
@@ -528,40 +528,40 @@ public final class DaggerDisKeyApplication_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel = "com.cyboglabs.diskey.presentation.dashboard.DashboardViewModel";
+      static String com_cyboglabs_diskey_presentation_player_AudioPlayerViewModel = "com.cyboglabs.diskey.presentation.player.AudioPlayerViewModel";
 
       static String com_cyboglabs_diskey_presentation_files_FileBrowserViewModel = "com.cyboglabs.diskey.presentation.files.FileBrowserViewModel";
 
-      static String com_cyboglabs_diskey_presentation_ota_OtaViewModel = "com.cyboglabs.diskey.presentation.ota.OtaViewModel";
-
-      static String com_cyboglabs_diskey_presentation_player_AudioPlayerViewModel = "com.cyboglabs.diskey.presentation.player.AudioPlayerViewModel";
-
       static String com_cyboglabs_diskey_presentation_scan_ScanViewModel = "com.cyboglabs.diskey.presentation.scan.ScanViewModel";
 
-      static String com_cyboglabs_diskey_presentation_debug_DebugViewModel = "com.cyboglabs.diskey.presentation.debug.DebugViewModel";
+      static String com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel = "com.cyboglabs.diskey.presentation.dashboard.DashboardViewModel";
 
       static String com_cyboglabs_diskey_presentation_settings_SettingsViewModel = "com.cyboglabs.diskey.presentation.settings.SettingsViewModel";
 
-      @KeepFieldType
-      DashboardViewModel com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel2;
+      static String com_cyboglabs_diskey_presentation_debug_DebugViewModel = "com.cyboglabs.diskey.presentation.debug.DebugViewModel";
 
-      @KeepFieldType
-      FileBrowserViewModel com_cyboglabs_diskey_presentation_files_FileBrowserViewModel2;
-
-      @KeepFieldType
-      OtaViewModel com_cyboglabs_diskey_presentation_ota_OtaViewModel2;
+      static String com_cyboglabs_diskey_presentation_ota_OtaViewModel = "com.cyboglabs.diskey.presentation.ota.OtaViewModel";
 
       @KeepFieldType
       AudioPlayerViewModel com_cyboglabs_diskey_presentation_player_AudioPlayerViewModel2;
 
       @KeepFieldType
+      FileBrowserViewModel com_cyboglabs_diskey_presentation_files_FileBrowserViewModel2;
+
+      @KeepFieldType
       ScanViewModel com_cyboglabs_diskey_presentation_scan_ScanViewModel2;
+
+      @KeepFieldType
+      DashboardViewModel com_cyboglabs_diskey_presentation_dashboard_DashboardViewModel2;
+
+      @KeepFieldType
+      SettingsViewModel com_cyboglabs_diskey_presentation_settings_SettingsViewModel2;
 
       @KeepFieldType
       DebugViewModel com_cyboglabs_diskey_presentation_debug_DebugViewModel2;
 
       @KeepFieldType
-      SettingsViewModel com_cyboglabs_diskey_presentation_settings_SettingsViewModel2;
+      OtaViewModel com_cyboglabs_diskey_presentation_ota_OtaViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -595,7 +595,7 @@ public final class DaggerDisKeyApplication_HiltComponents_SingletonC {
           return (T) new DebugViewModel(singletonCImpl.bleConnectionManagerProvider.get());
 
           case 3: // com.cyboglabs.diskey.presentation.files.FileBrowserViewModel 
-          return (T) new FileBrowserViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.bindAudioFileRepositoryProvider.get(), singletonCImpl.syncManagerProvider.get(), singletonCImpl.appPreferencesProvider.get());
+          return (T) new FileBrowserViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.bindAudioFileRepositoryProvider.get(), singletonCImpl.syncManagerProvider.get(), singletonCImpl.appPreferencesProvider.get(), singletonCImpl.bleConnectionManagerProvider.get());
 
           case 4: // com.cyboglabs.diskey.presentation.ota.OtaViewModel 
           return (T) new OtaViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.otaManagerProvider.get());

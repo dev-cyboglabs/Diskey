@@ -56,6 +56,8 @@ class DashboardViewModel @Inject constructor(
         loadPairedDevice()
     }
 
+    private var hasAutoSynced = false
+
     private fun observeConnectionState() {
         viewModelScope.launch {
             bleConnectionManager.connectionState.collect { state ->
@@ -63,6 +65,16 @@ class DashboardViewModel @Inject constructor(
 
                 if (state == ConnectionState.CONNECTED) {
                     requestBattery()
+                    // Trigger auto-sync if enabled and not already synced
+                    val autoSyncEnabled = appPreferences.autoSync.first()
+                    if (autoSyncEnabled && !hasAutoSynced) {
+                        Timber.d("DashboardViewModel: auto-sync triggered on connection")
+                        syncFiles()
+                        hasAutoSynced = true
+                    }
+                } else if (state == ConnectionState.DISCONNECTED) {
+                    // Reset auto-sync flag when disconnected
+                    hasAutoSynced = false
                 }
             }
         }
@@ -110,9 +122,12 @@ class DashboardViewModel @Inject constructor(
             Timber.w("DashboardViewModel: sync ignored - device not connected")
             return
         }
-        val address = _uiState.value.deviceAddress.ifBlank { "current_device" }
-        syncManager.startSync(address)
-        Timber.d("DashboardViewModel: sync started")
+        viewModelScope.launch {
+            // Use paired address from preferences directly to ensure consistency
+            val address = appPreferences.pairedAddress.first().orEmpty().ifBlank { "current_device" }
+            Timber.d("DashboardViewModel: sync started with address: '$address'")
+            syncManager.startSync(address)
+        }
     }
 
     fun cancelSync() {

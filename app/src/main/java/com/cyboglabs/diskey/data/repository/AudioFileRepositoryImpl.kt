@@ -17,6 +17,9 @@ class AudioFileRepositoryImpl @Inject constructor(
     override fun getFilesForDevice(deviceAddress: String): Flow<List<AudioFile>> =
         audioFileDao.getFilesForDevice(deviceAddress).map { it.map { e -> e.toDomain() } }
 
+    override suspend fun getFilesForDeviceList(deviceAddress: String): List<AudioFile> =
+        audioFileDao.getFilesForDeviceList(deviceAddress).map { it.toDomain() }
+
     override fun getDownloadedFiles(): Flow<List<AudioFile>> =
         audioFileDao.getDownloadedFiles().map { it.map { e -> e.toDomain() } }
 

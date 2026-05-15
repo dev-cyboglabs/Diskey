@@ -231,7 +231,9 @@ class SyncManager @Inject constructor(
 
         // Persist discovered file list so the file browser can show it immediately
         if (files.isNotEmpty()) {
+            Timber.d("SyncManager: saving ${files.size} files to database with address: '$deviceAddress'")
             audioFileRepository.saveFiles(files, deviceAddress)
+            Timber.d("SyncManager: files saved successfully")
         }
 
         Timber.i("SyncManager: file list complete — ${files.size} entries")

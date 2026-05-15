@@ -36,6 +36,7 @@ object BleCommand {
     const val CMD_GET_FILE_LIST: Byte = 0x1B
     const val CMD_DOWNLOAD_FILE: Byte = 0x1C
     const val CMD_FILE_COMPLETE: Byte = 0x1D
+    const val CMD_DELETE_FILE: Byte = 0x1E
 
     // Handshake sub-types (second byte of cmd)
     const val HS_DEVICE_HELLO: Byte = 0x01

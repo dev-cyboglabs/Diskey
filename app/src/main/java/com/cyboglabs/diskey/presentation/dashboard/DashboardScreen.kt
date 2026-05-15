@@ -177,23 +177,11 @@ private fun DeviceStatusCard(state: DashboardUiState) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(
-                        state.deviceName.ifBlank { "Device" },
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.weight(1f)
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    Image(
-                        painter = painterResource(id = R.drawable.pendant_device),
-                        contentDescription = "Device",
-                        modifier = Modifier.size(62.dp)
-                    )
-                }
+                Text(
+                    state.deviceName.ifBlank { "Device" },
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold
+                )
                 Text(
                     state.connectionState.name.replace("_", " "),
                     style = MaterialTheme.typography.bodySmall,
@@ -221,6 +209,12 @@ private fun DeviceStatusCard(state: DashboardUiState) {
                     }
                 }
             }
+            Spacer(Modifier.width(16.dp))
+            Image(
+                painter = painterResource(id = R.drawable.pendant_device),
+                contentDescription = "Device",
+                modifier = Modifier.size(62.dp)
+            )
         }
     }
 }

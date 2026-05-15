@@ -279,6 +279,68 @@ public final class AudioFileDao_Impl implements AudioFileDao {
   }
 
   @Override
+  public Object getFilesForDeviceList(final String deviceAddress,
+      final Continuation<? super List<AudioFileEntity>> $completion) {
+    final String _sql = "SELECT * FROM audio_files WHERE deviceAddress = ? ORDER BY createdAtEpoch DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindString(_argIndex, deviceAddress);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<AudioFileEntity>>() {
+      @Override
+      @NonNull
+      public List<AudioFileEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfFilename = CursorUtil.getColumnIndexOrThrow(_cursor, "filename");
+          final int _cursorIndexOfSizeBytes = CursorUtil.getColumnIndexOrThrow(_cursor, "sizeBytes");
+          final int _cursorIndexOfCreatedAtEpoch = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAtEpoch");
+          final int _cursorIndexOfDurationMs = CursorUtil.getColumnIndexOrThrow(_cursor, "durationMs");
+          final int _cursorIndexOfIndex = CursorUtil.getColumnIndexOrThrow(_cursor, "index");
+          final int _cursorIndexOfLocalPath = CursorUtil.getColumnIndexOrThrow(_cursor, "localPath");
+          final int _cursorIndexOfIsDownloaded = CursorUtil.getColumnIndexOrThrow(_cursor, "isDownloaded");
+          final int _cursorIndexOfDeviceAddress = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceAddress");
+          final int _cursorIndexOfDownloadedAtMs = CursorUtil.getColumnIndexOrThrow(_cursor, "downloadedAtMs");
+          final List<AudioFileEntity> _result = new ArrayList<AudioFileEntity>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final AudioFileEntity _item;
+            final String _tmpFilename;
+            _tmpFilename = _cursor.getString(_cursorIndexOfFilename);
+            final long _tmpSizeBytes;
+            _tmpSizeBytes = _cursor.getLong(_cursorIndexOfSizeBytes);
+            final long _tmpCreatedAtEpoch;
+            _tmpCreatedAtEpoch = _cursor.getLong(_cursorIndexOfCreatedAtEpoch);
+            final long _tmpDurationMs;
+            _tmpDurationMs = _cursor.getLong(_cursorIndexOfDurationMs);
+            final int _tmpIndex;
+            _tmpIndex = _cursor.getInt(_cursorIndexOfIndex);
+            final String _tmpLocalPath;
+            if (_cursor.isNull(_cursorIndexOfLocalPath)) {
+              _tmpLocalPath = null;
+            } else {
+              _tmpLocalPath = _cursor.getString(_cursorIndexOfLocalPath);
+            }
+            final boolean _tmpIsDownloaded;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfIsDownloaded);
+            _tmpIsDownloaded = _tmp != 0;
+            final String _tmpDeviceAddress;
+            _tmpDeviceAddress = _cursor.getString(_cursorIndexOfDeviceAddress);
+            final long _tmpDownloadedAtMs;
+            _tmpDownloadedAtMs = _cursor.getLong(_cursorIndexOfDownloadedAtMs);
+            _item = new AudioFileEntity(_tmpFilename,_tmpSizeBytes,_tmpCreatedAtEpoch,_tmpDurationMs,_tmpIndex,_tmpLocalPath,_tmpIsDownloaded,_tmpDeviceAddress,_tmpDownloadedAtMs);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
   public Object getFile(final String filename,
       final Continuation<? super AudioFileEntity> $completion) {
     final String _sql = "SELECT * FROM audio_files WHERE filename = ? LIMIT 1";

@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.AudioFile
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudDownload
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DownloadForOffline
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.PlayArrow
@@ -52,6 +53,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshContainer
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -68,6 +70,7 @@ import com.cyboglabs.diskey.domain.model.AudioFile
 import com.cyboglabs.diskey.presentation.theme.Connected
 import com.cyboglabs.diskey.presentation.theme.Primary
 import com.cyboglabs.diskey.utils.toFormattedDate
+import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -79,6 +82,12 @@ fun FileBrowserScreen(
     val state by viewModel.uiState.collectAsState()
     var showSortMenu by remember { mutableStateOf(false) }
     val pullState = rememberPullToRefreshState()
+
+    // Force reload files when screen opens to catch files synced before navigation
+    LaunchedEffect(Unit) {
+        Timber.d("FileBrowserScreen: LaunchedEffect triggered, calling forceReloadSync")
+        viewModel.forceReloadSync()
+    }
 
     BackHandler { onBack() }
 
@@ -125,13 +134,18 @@ fun FileBrowserScreen(
             )
         },
         floatingActionButton = {
-            AnimatedVisibility(visible = state.selectedFiles.isNotEmpty()) {
-                FloatingActionButton(
-                    onClick = viewModel::downloadSelected,
-                    containerColor = Primary
-                ) {
-                    Icon(Icons.Default.CloudDownload, "Download selected",
-                        tint = MaterialTheme.colorScheme.onPrimary)
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier.padding(16.dp)
+            ) {
+                AnimatedVisibility(visible = state.selectedFiles.isNotEmpty()) {
+                    FloatingActionButton(
+                        onClick = viewModel::deleteSelected,
+                        containerColor = androidx.compose.ui.graphics.Color(0xFFE53935)
+                    ) {
+                        Icon(Icons.Default.Delete, "Delete selected",
+                            tint = androidx.compose.ui.graphics.Color.White)
+                    }
                 }
             }
         }
@@ -223,11 +237,11 @@ fun FileBrowserScreen(
                         }
                     }
 
-                    // ── On device SD card — not yet downloaded ────────────────
+                    // ── On device SD card ────────────────────────────────────────
                     if (state.pendingFiles.isNotEmpty()) {
                         stickyHeader {
                             SectionHeader(
-                                icon = Icons.Default.DownloadForOffline,
+                                icon = Icons.Default.AudioFile,
                                 title = "On Device SD Card",
                                 count = state.pendingFiles.size,
                                 iconTint = Primary
@@ -237,17 +251,11 @@ fun FileBrowserScreen(
                             AudioFileCard(
                                 file = file,
                                 isSelected = file.filename in state.selectedFiles,
-                                isDownloading = file.filename in state.downloadingFiles,
+                                isDownloading = false,
                                 isDownloaded = false,
-                                onCardClick = {
-                                    if (state.selectedFiles.isNotEmpty()) {
-                                        viewModel.toggleSelect(file.filename)
-                                    } else {
-                                        viewModel.downloadFile(file.filename)
-                                    }
-                                },
+                                onCardClick = { viewModel.toggleSelect(file.filename) },
                                 onLongClick = { viewModel.toggleSelect(file.filename) },
-                                onActionClick = { viewModel.downloadFile(file.filename) }
+                                onActionClick = { viewModel.toggleSelect(file.filename) }
                             )
                         }
                     }

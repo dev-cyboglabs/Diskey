@@ -27,6 +27,7 @@ class AppPreferences @Inject constructor(
         val KEY_PAIRED_ADDRESS = stringPreferencesKey("paired_address")
         val KEY_PAIRED_NAME = stringPreferencesKey("paired_name")
         val KEY_AUTO_RECONNECT = booleanPreferencesKey("auto_reconnect")
+        val KEY_AUTO_SYNC = booleanPreferencesKey("auto_sync")
         val KEY_SAVE_WAV = booleanPreferencesKey("save_wav")
         val KEY_SCREEN_TIMEOUT_MIN = intPreferencesKey("screen_timeout_min")
         val KEY_AUTO_POWER_OFF_MIN = intPreferencesKey("auto_power_off_min")
@@ -39,6 +40,7 @@ class AppPreferences @Inject constructor(
     val pairedAddress: Flow<String?> = ds.data.map { it[KEY_PAIRED_ADDRESS] }
     val pairedName: Flow<String?> = ds.data.map { it[KEY_PAIRED_NAME] }
     val autoReconnect: Flow<Boolean> = ds.data.map { it[KEY_AUTO_RECONNECT] ?: true }
+    val autoSync: Flow<Boolean> = ds.data.map { it[KEY_AUTO_SYNC] ?: true }
     val saveWav: Flow<Boolean> = ds.data.map { it[KEY_SAVE_WAV] ?: false }
     val screenTimeoutMin: Flow<Int> = ds.data.map { it[KEY_SCREEN_TIMEOUT_MIN] ?: 5 }
     val autoPowerOffMin: Flow<Int> = ds.data.map { it[KEY_AUTO_POWER_OFF_MIN] ?: 30 }
@@ -54,6 +56,7 @@ class AppPreferences @Inject constructor(
         }
     }
     suspend fun setAutoReconnect(enabled: Boolean) = ds.edit { it[KEY_AUTO_RECONNECT] = enabled }
+    suspend fun setAutoSync(enabled: Boolean) = ds.edit { it[KEY_AUTO_SYNC] = enabled }
     suspend fun setSaveWav(enabled: Boolean) = ds.edit { it[KEY_SAVE_WAV] = enabled }
     suspend fun setScreenTimeout(minutes: Int) = ds.edit { it[KEY_SCREEN_TIMEOUT_MIN] = minutes }
     suspend fun setAutoPowerOff(minutes: Int) = ds.edit { it[KEY_AUTO_POWER_OFF_MIN] = minutes }

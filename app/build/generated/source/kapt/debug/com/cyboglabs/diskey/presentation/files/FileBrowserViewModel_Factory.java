@@ -2,6 +2,7 @@ package com.cyboglabs.diskey.presentation.files;
 
 import android.content.Context;
 import com.cyboglabs.diskey.audio.SyncManager;
+import com.cyboglabs.diskey.ble.BleConnectionManager;
 import com.cyboglabs.diskey.data.datastore.AppPreferences;
 import com.cyboglabs.diskey.domain.repository.AudioFileRepository;
 import dagger.internal.DaggerGenerated;
@@ -34,29 +35,34 @@ public final class FileBrowserViewModel_Factory implements Factory<FileBrowserVi
 
   private final Provider<AppPreferences> appPreferencesProvider;
 
+  private final Provider<BleConnectionManager> bleConnectionManagerProvider;
+
   public FileBrowserViewModel_Factory(Provider<Context> contextProvider,
       Provider<AudioFileRepository> audioFileRepositoryProvider,
-      Provider<SyncManager> syncManagerProvider, Provider<AppPreferences> appPreferencesProvider) {
+      Provider<SyncManager> syncManagerProvider, Provider<AppPreferences> appPreferencesProvider,
+      Provider<BleConnectionManager> bleConnectionManagerProvider) {
     this.contextProvider = contextProvider;
     this.audioFileRepositoryProvider = audioFileRepositoryProvider;
     this.syncManagerProvider = syncManagerProvider;
     this.appPreferencesProvider = appPreferencesProvider;
+    this.bleConnectionManagerProvider = bleConnectionManagerProvider;
   }
 
   @Override
   public FileBrowserViewModel get() {
-    return newInstance(contextProvider.get(), audioFileRepositoryProvider.get(), syncManagerProvider.get(), appPreferencesProvider.get());
+    return newInstance(contextProvider.get(), audioFileRepositoryProvider.get(), syncManagerProvider.get(), appPreferencesProvider.get(), bleConnectionManagerProvider.get());
   }
 
   public static FileBrowserViewModel_Factory create(Provider<Context> contextProvider,
       Provider<AudioFileRepository> audioFileRepositoryProvider,
-      Provider<SyncManager> syncManagerProvider, Provider<AppPreferences> appPreferencesProvider) {
-    return new FileBrowserViewModel_Factory(contextProvider, audioFileRepositoryProvider, syncManagerProvider, appPreferencesProvider);
+      Provider<SyncManager> syncManagerProvider, Provider<AppPreferences> appPreferencesProvider,
+      Provider<BleConnectionManager> bleConnectionManagerProvider) {
+    return new FileBrowserViewModel_Factory(contextProvider, audioFileRepositoryProvider, syncManagerProvider, appPreferencesProvider, bleConnectionManagerProvider);
   }
 
   public static FileBrowserViewModel newInstance(Context context,
       AudioFileRepository audioFileRepository, SyncManager syncManager,
-      AppPreferences appPreferences) {
-    return new FileBrowserViewModel(context, audioFileRepository, syncManager, appPreferences);
+      AppPreferences appPreferences, BleConnectionManager bleConnectionManager) {
+    return new FileBrowserViewModel(context, audioFileRepository, syncManager, appPreferences, bleConnectionManager);
   }
 }
