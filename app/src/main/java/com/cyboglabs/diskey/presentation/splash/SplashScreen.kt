@@ -69,26 +69,36 @@ fun SplashScreen(
         }
         delay(800)
         
-        // Check if device is paired in app preferences
-        val prefs = com.cyboglabs.diskey.data.datastore.AppPreferences(context)
-        val pairedAddress = prefs.pairedAddress.first()
-        val autoReconnectEnabled = prefs.autoReconnect.first()
-        
-        if (pairedAddress != null && pairedAddress.isNotEmpty() && autoReconnectEnabled) {
-            // Device is paired and auto-reconnect is enabled, trigger auto-reconnect
-            coroutineScope.launch {
-                val intent = Intent(context, BleService::class.java).apply {
-                    action = BleService.ACTION_CONNECT
-                    putExtra(BleService.EXTRA_ADDRESS, pairedAddress)
+        try {
+            // Check if device is paired in app preferences
+            val prefs = com.cyboglabs.diskey.data.datastore.AppPreferences(context)
+            val pairedAddress = prefs.pairedAddress.first()
+            val autoReconnectEnabled = prefs.autoReconnect.first()
+            
+            if (pairedAddress != null && pairedAddress.isNotEmpty() && autoReconnectEnabled) {
+                // Device is paired and auto-reconnect is enabled, trigger auto-reconnect
+                coroutineScope.launch {
+                    try {
+                        val intent = Intent(context, BleService::class.java).apply {
+                            action = BleService.ACTION_CONNECT
+                            putExtra(BleService.EXTRA_ADDRESS, pairedAddress)
+                        }
+                        context.startForegroundService(intent)
+                    } catch (e: Exception) {
+                        timber.log.Timber.e(e, "SplashScreen: Failed to start BLE service")
+                    }
                 }
-                context.startForegroundService(intent)
+                onNavigateToDashboard()
+            } else if (pairedAddress != null && pairedAddress.isNotEmpty()) {
+                // Device is paired but auto-reconnect is disabled, go to dashboard without connecting
+                onNavigateToDashboard()
+            } else {
+                // No paired device, go to scan screen
+                onNavigateToScan()
             }
-            onNavigateToDashboard()
-        } else if (pairedAddress != null && pairedAddress.isNotEmpty()) {
-            // Device is paired but auto-reconnect is disabled, go to dashboard without connecting
-            onNavigateToDashboard()
-        } else {
-            // No paired device, go to scan screen
+        } catch (e: Exception) {
+            timber.log.Timber.e(e, "SplashScreen: Error during initialization")
+            // Navigate to scan screen as fallback
             onNavigateToScan()
         }
     }
