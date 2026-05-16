@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#2196F3</color>
+    <string name="app_name">Diskey</string>
+    <string name="ble_service_name">BLE Connection</string>
+    <string name="download_service_name">Audio Download</string>
+    <string name="playback_service_name">Audio Playback</string>
+    <string name="wifi_service_name">WiFi Transfer</string>
+    <style name="Theme.Diskey" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.Diskey.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#000000</item>
+        <item name="postSplashScreenTheme">@style/Theme.Diskey</item>
+    </style>
+</resources>

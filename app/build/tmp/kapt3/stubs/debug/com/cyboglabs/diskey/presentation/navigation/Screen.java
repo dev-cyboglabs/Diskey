@@ -2,8 +2,6 @@ package com.cyboglabs.diskey.presentation.navigation;
 
 import androidx.compose.runtime.Composable;
 import androidx.navigation.NavHostController;
-import com.cyboglabs.diskey.presentation.debug.DebugScreen;
-import com.cyboglabs.diskey.presentation.ota.OtaScreen;
 
 @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u00002\u00020\u0001:\b\u0007\b\t\n\u000b\f\r\u000eB\u000f\b\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006\u0082\u0001\b\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u00a8\u0006\u0017"}, d2 = {"Lcom/cyboglabs/diskey/presentation/navigation/Screen;", "", "route", "", "(Ljava/lang/String;)V", "getRoute", "()Ljava/lang/String;", "AudioPlayer", "Dashboard", "Debug", "FileBrowser", "Ota", "Scan", "Settings", "Splash", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$AudioPlayer;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$Dashboard;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$Debug;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$FileBrowser;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$Ota;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$Scan;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$Settings;", "Lcom/cyboglabs/diskey/presentation/navigation/Screen$Splash;", "app_debug"})
 public abstract class Screen {

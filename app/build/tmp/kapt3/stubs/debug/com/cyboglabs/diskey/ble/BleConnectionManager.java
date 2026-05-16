@@ -7,7 +7,6 @@ import com.cyboglabs.diskey.data.datastore.AppPreferences;
 import com.cyboglabs.diskey.domain.model.BlePacket;
 import com.cyboglabs.diskey.domain.model.ConnectionState;
 import com.cyboglabs.diskey.domain.model.HandshakePacket;
-import com.cyboglabs.diskey.utils.getStrOrNull;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import dagger.hilt.android.qualifiers.ApplicationContext;
